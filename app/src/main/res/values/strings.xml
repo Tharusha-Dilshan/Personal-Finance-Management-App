@@ -1,0 +1,124 @@
+<resources>
+    <string name="app_name">Personal-Finance-Management-App</string>
+    <!-- IT21259302 Narasinghe N.M.N.N -->
+    <string name="finance">FINANCE</string>
+    <string name="rates">RATES</string>
+    <string name="calc">CALCULATOR</string>
+    <string name="preference">PREFERENCES</string>
+    <string name="suggestion">SUGGESTION</string>
+    <string name="edSuggestion">Edit Suggestions</string>
+    <string name="selectType">Select Type</string>
+    <string name="selectBank">Select Bank</string>
+    <string name="selectPeriod">Select Period</string>
+    <string name="selectCalc">Calculators</string>
+    <string name="Calculate">Calculate</string>
+    <string name="submit">Submit</string>
+    <string name="editSuggestion">EDIT SUGGESTIONS</string>
+    <string name="editDetails">Update</string>
+    <string name="deleteDetails">SUGGESTION</string>
+    <string name="bName">Bank Name</string>
+    <string name="rate">Current Rates</string>
+    <string-array name="financeType">
+        <item>Fixed Deposit</item>
+        <item>Loan</item>
+        <item>Leasings</item>
+        <item>Insurance</item>
+        <item>Exchange Rates</item>
+    </string-array>
+    <!-- IT21259302 Narasinghe N.M.N.N -->
+    <string-array name="bankNames">
+        <item>BOC</item>
+        <item>NSB</item>
+        <item>Com-Bank</item>
+        <item>Sampath</item>
+        <item>Peoples Bank</item>
+    </string-array>
+    <string-array name="tPeriod">
+        <item>03 Months</item>
+        <item>06 Months</item>
+        <item>12 Months</item>
+        <item>36 Months</item>
+        <item>60 Months</item>
+    </string-array>
+
+
+    <!--IT21259098 - Dilshan K.H.T -->
+    <string name="portTitle">Portfolio</string>
+    <string name="title_notifications" />
+    <string name="title_dashboard" />
+    <string name="title_home" />
+    <string name="add">Add</string>
+    <string name="Assets">My assets</string>
+    <string name="Savings">Saving account</string>
+    <string name="Crypto">Crypto</string>
+    <string name="Fixed">Fixed deposits</string>
+    <string name="Total">Total assets</string>
+    <string name="Type">Asset type: </string>
+    <string name="Amount">Amount</string>
+    <string name="Inter">Interest rate</string>
+    <string name="Duration">Duration</string>
+    <string name="AccNum">Account number</string>
+    <string name="Bank">Bank name</string>
+    <string name="Add">Add</string>
+    <string name="TotInter">Total interest</string>
+    <string name="Eztitle">Ez Share</string>
+
+    <string-array name="typeAsset">
+        <item>Fixed Deposit</item>
+        <item>Savings</item>
+        <item>Treasury Bill</item>
+        <item>Stocks</item>
+        <item>Crypto</item>
+    </string-array>
+
+    <!--IT21263262- Abeykoon A.M.P.N -->
+    <string name="welcome">Hi Janith Bandara</string>
+    <string name="monthsal">Monthly salary : </string>
+    <string name="monthsalhint">Rs.25000</string>
+    <string name="totexpen">Total expenses : </string>
+    <string name="savingG">Saving goal : </string>
+    <string name="setgoal">Set Goals</string>
+    <string name="expen">Expenses</string>
+    <string name="TotexpensTitle">Total Expenses</string>
+    <string name="Cat">Category</string>
+    <string name="goal">Goal</string>
+    <string name="AmtSpent">Amount Spent</string>
+    <string name="UtilityEX">Utility</string>
+    <string name="TelecommunicationEX">Telecommunication</string>
+    <string name="FoodEX">Food</string>
+    <string name="GroceriesEX">Groceries</string>
+    <string name="LoanEX">Loan</string>
+    <string name="FinanceEX">Finance</string>
+    <string name="TransactionsEX">Transactions</string>
+    <string name="HealthEX">Health</string>
+    <string name="OtherEX">Other</string>
+    <string name="btndelete">Delete</string>
+    <string name="btnupdate">Update</string>
+    <string name="NewC">New category</string>
+    <string name="Cname">Name</string>
+
+
+    <!--IT21259470 - Pehesarani W.K.A-->
+    <string name="Instruction">Do you have an account yet? SIGN UP</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="utility">Utility</string>
+    <string name="telecommunication">Telecommunication</string>
+    <string name="health">Health</string>
+    <string name="food">Food</string>
+    <string name="transaction">Transaction</string>
+    <string name="search">Search ...</string>
+
+    <string-array name="expenses">
+        <item>Utility</item>
+        <item>Telecommunication</item>
+        <item>Health</item>
+        <item>Food</item>
+        <item>Groceries</item>
+        <item>Loan</item>
+        <item>Finance</item>
+        <item>Other</item>
+    </string-array>
+
+</resources>
