@@ -12,5 +12,26 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+
+
     </style>
+
+            <!-- IT21259302 -->
+            <style name="myTheme" >
+                <item name="android:layout_marginLeft">16dp</item>
+                <item name="android:layout_marginTop">16dp</item>
+                <item name="android:layout_marginRight">16dp</item>
+                <item name="android:layout_marginBottom">16dp</item>
+                <item name ="android:background">@drawable/custom_background</item>
+            </style>
+
+            <!--IT21259098 -->
+            <style name="mySpinnerItemStyle" parent="Base.Widget.AppCompat.Spinner">
+                <item name="android:textColor">@color/white</item>
+            </style>
+
+            <!--IT21259470-->
+            <style name="SpinnerItemStyle" parent="Base.Widget.AppCompat.Spinner">
+                <item name="android:textColor">@color/white</item>
+            </style>
 </resources>

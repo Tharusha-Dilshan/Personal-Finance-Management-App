@@ -11,33 +11,33 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PersonalFinanceManagementApp"
         tools:targetApi="31">
+
         <activity
-            android:name=".DashHome"
+            android:name=".PortEditAsset"
             android:exported="true" >
 
         </activity>
-
         <activity
-            android:name=".CreateAccount"
-            android:exported="true" >
-
-
-        </activity>
-        <activity
-            android:name=".Login"
-            android:exported="true" >
+            android:name=".PortAddAsset"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
+            android:name=".DashHome"
+            android:exported="true" />
+        <activity
+            android:name=".CreateAccount"
+            android:exported="true" />
+        <activity
+            android:name=".Login"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
     </application>
 
 </manifest>
