@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.INTERNET" />
+
 
     <application
         android:allowBackup="true"
@@ -12,6 +14,13 @@
         android:theme="@style/Theme.PersonalFinanceManagementApp"
         tools:targetApi="31">
 
+        <activity
+            android:name=".CurrencyConvertor"
+            android:exported="true"
+            />
+        <activity
+            android:name=".LoanCalculator"
+            android:exported="true"/>
         <activity
             android:name=".PortEditAsset"
             android:exported="true" >
