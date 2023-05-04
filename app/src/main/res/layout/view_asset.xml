@@ -214,8 +214,8 @@
                     android:backgroundTint="@color/Teal"
                     android:backgroundTintMode="add"
                     android:drawableLeft="@drawable/edit"
-                    android:paddingStart="40sp"
-                    android:paddingEnd="40sp"
+                    android:paddingStart="20sp"
+                    android:paddingEnd="10sp"
                     android:text="Edit" />
 
                 <Button
@@ -226,8 +226,8 @@
                     android:layout_weight="1"
                     android:backgroundTint="@color/Teal"
                     android:drawableLeft="@drawable/delete"
-                    android:paddingStart="30sp"
-                    android:paddingEnd="30sp"
+                    android:paddingStart="10sp"
+                    android:paddingEnd="10sp"
                     android:text="Delete"
                     android:textAlignment="center" />
             </LinearLayout>
