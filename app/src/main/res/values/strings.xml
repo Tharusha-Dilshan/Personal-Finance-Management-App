@@ -40,7 +40,15 @@
         <item>36 Months</item>
         <item>60 Months</item>
     </string-array>
-
+    <array name="currencies">
+        <item>USD - United States Dollar</item>
+        <item>EUR - Euro</item>
+        <item>GBP - British Pound</item>
+        <item>JPY - Japanese Yen</item>
+        <item>CNY - Chinese Yuan</item>
+        <item>LKR - Sri Lankan Rupees</item>
+        <!-- Add more currencies as needed... -->
+    </array>
 
     <!--IT21259098 - Dilshan K.H.T -->
     <string name="portTitle">Portfolio</string>
