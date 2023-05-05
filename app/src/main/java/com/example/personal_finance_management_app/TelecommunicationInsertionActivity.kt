@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import com.example.personal_finance_management_app.DataClasses.TelecommunicationModel
+import com.example.personal_finance_management_app.databinding.ActivityPortAddAssetBinding
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
@@ -16,6 +17,8 @@ class TelecommunicationInsertionActivity : AppCompatActivity() {
     private lateinit var telBillAmount: EditText
     private lateinit var telBillDate: EditText
     private lateinit var telSaveButton: Button
+
+    private lateinit var binding: ActivityPortAddAssetBinding
 
     //database reference
     private lateinit var dbRef: DatabaseReference
