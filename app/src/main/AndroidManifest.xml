@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.INTERNET" />
+
 
     <application
         android:allowBackup="true"
@@ -12,6 +14,7 @@
         android:theme="@style/Theme.PersonalFinanceManagementApp"
         tools:targetApi="31">
         <activity
+<<<<<<< HEAD
             android:name=".TelecommunicationInsertionActivity"
             android:exported="true" />
         <activity
@@ -23,12 +26,36 @@
         <activity
             android:name=".UtilityFetchingActivity"
             android:exported="true" />
+=======
+            android:name=".Portfolio"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CurrencyConvertor"
+            android:exported="true"
+            />
+        <activity
+            android:name=".LoanCalculator"
+            android:exported="true"/>
+
+>>>>>>> ee903183661fe62d116d634dd1eedf208b15cb7d
         <activity
             android:name=".PortEditAsset"
             android:exported="true" />
         <activity
             android:name=".PortAddAsset"
+<<<<<<< HEAD
             android:exported="true" />
+=======
+            android:exported="true">
+
+        </activity>
+>>>>>>> ee903183661fe62d116d634dd1eedf208b15cb7d
         <activity
             android:name=".DashHome"
             android:exported="true" />
@@ -37,7 +64,9 @@
             android:exported="true" />
         <activity
             android:name=".Login"
-            android:exported="true" />
+            android:exported="true" >
+
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true" />

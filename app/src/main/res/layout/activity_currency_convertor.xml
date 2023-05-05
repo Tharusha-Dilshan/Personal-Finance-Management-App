@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".CurrencyConvertor">
+
+
+    <TextView
+        android:id="@+id/textView_heading"
+        android:layout_width="397dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:text="Exchange Rates"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_heading"
+        android:layout_alignStart="@+id/textView_heading"
+        android:layout_alignLeft="@+id/textView_heading"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="From Currency:"
+        android:textSize="20sp" />
+
+    <Spinner
+        android:id="@+id/spinner_from"
+        android:layout_width="380dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/textView_from"
+        android:layout_alignStart="@+id/textView_from"
+        android:layout_alignLeft="@+id/textView_from"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:entries="@array/currencies" />
+
+    <TextView
+        android:id="@+id/textView_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinner_from"
+        android:layout_alignStart="@+id/textView_from"
+        android:layout_alignLeft="@+id/textView_from"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="To Currency:"
+        android:textSize="20sp" />
+
+    <Spinner
+        android:id="@+id/spinner_to"
+        android:layout_width="380dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/textView_to"
+        android:layout_alignStart="@+id/textView_to"
+        android:layout_alignLeft="@+id/textView_to"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:entries="@array/currencies" />
+
+    <EditText
+        android:id="@+id/editText_amount"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/spinner_to"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="Enter amount to convert"
+        android:inputType="numberDecimal"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/button_convert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText_amount"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Convert"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView_result"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/button_convert"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:textSize="24sp" />
+
+    </RelativeLayout>
+
