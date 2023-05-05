@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item name="addTel" type="id">addTel</item>
+<!--    <item name="addTel" type="id">addTel</item>-->
+<!--    <item name="addHealth" type="id">addHealth</item>-->
 </resources>
