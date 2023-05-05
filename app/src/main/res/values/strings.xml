@@ -133,4 +133,5 @@
 
     <item name="addHealth" type="id" />
     <item name="addTel" type="id" />
+    <item name="addUtility" type="id" />
 </resources>

@@ -56,6 +56,11 @@ class HealthInsertionActivity : AppCompatActivity() {
                 databaseRef.child(id).setValue(health).addOnCompleteListener {
                     if (it.isSuccessful){
                         Toast.makeText(this, "Your Data Added successfully", Toast.LENGTH_SHORT).show()
+
+                        binding.healthBillName.text.clear()
+                        binding.healthBillAmount.text.clear()
+                        binding.healthBillDate.text.clear()
+
                         intent = Intent(applicationContext, HealthFetchingActivity::class.java)
                         startActivity(intent)
                     } else {

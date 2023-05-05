@@ -1,77 +1,74 @@
 package com.example.personal_finance_management_app
 
-import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.Toast
+import android.app.Dialog
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.widget.Toast
+import com.example.personal_finance_management_app.DataClasses.HealthModel
 import com.example.personal_finance_management_app.DataClasses.UtilityModel
+import com.example.personal_finance_management_app.databinding.ActivityDashHomeBinding
+import com.example.personal_finance_management_app.databinding.ActivityUtilityInsertionBinding
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
 class UtilityInsertionActivity : AppCompatActivity() {
-
-    //Initialize views
-    private lateinit var utilityBillName : EditText
-    private lateinit var utilityBillAmount : EditText
-    private lateinit var utilityBillDate : EditText
-    private lateinit var utilitySaveButton : Button
-
-    //database reference
-    private lateinit var dbRef: DatabaseReference
+    private lateinit var binding: ActivityUtilityInsertionBinding
+    private lateinit var auth: FirebaseAuth
+    private lateinit var databaseRef: DatabaseReference
+    private lateinit var uid: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(/* layoutResID = */ R.layout.activity_utility_insertion)
+        binding = ActivityUtilityInsertionBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        utilityBillName = findViewById(R.id.utilityBillName)
-        utilityBillAmount = findViewById(R.id.utilityBillAmount)
-        utilityBillDate = findViewById(R.id.utilityBillDate)
-        utilitySaveButton = findViewById(R.id.utilitySaveButton)
+        //initialize variables
+        auth = FirebaseAuth.getInstance()
+        uid = auth.currentUser?.uid.toString()
+        databaseRef = FirebaseDatabase.getInstance().reference
+            .child("utility").child(uid)
 
-        dbRef = FirebaseDatabase.getInstance().getReference("Utility")
+        binding.utilitySaveButton.setOnClickListener{
 
-        utilitySaveButton.setOnClickListener {
-            saveUtilityData()
+            var utilityBillName = binding.utilityBillName.text.toString()
+            var utilityBillAmount = binding.utilityBillAmount.text.toString()
+            var utilityBillDate = binding.utilityBillDate.text.toString()
+
+
+            if(utilityBillName.isEmpty() || utilityBillAmount.isEmpty() || utilityBillDate.isEmpty()) {
+
+                if (utilityBillName.isEmpty()) {
+                    binding.utilityBillName.error = "Enter Bill name"
+                }
+                if (utilityBillAmount.isEmpty()) {
+                    binding.utilityBillAmount.error = "Enter Bill Amount"
+                }
+                if (utilityBillDate.isEmpty()) {
+                    binding.utilityBillDate.error = "Enter the Billing Date"
+                }
+            }else {
+                //Id for new record
+                var id = databaseRef.push().key!!
+                //create a health object
+                val utility = UtilityModel( utilityBillName,utilityBillAmount,utilityBillDate)
+                databaseRef.child(id).setValue(utility).addOnCompleteListener {
+                    if (it.isSuccessful){
+                        Toast.makeText(this, "Your Data Added successfully", Toast.LENGTH_SHORT).show()
+
+                        intent = Intent(applicationContext, UtilityFetchingActivity::class.java)
+                        startActivity(intent)
+
+                        binding.utilityBillName.text.clear()
+                        binding.utilityBillAmount.text.clear()
+                        binding.utilityBillDate.text.clear()
+
+                    } else {
+                        Toast.makeText(this, it.exception?.message, Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }
         }
     }
-
-    private fun saveUtilityData() {
-
-        //getting values
-        val utilityBillName = utilityBillName.text.toString()
-        val utilityBillAmount = utilityBillAmount.text.toString()
-        val utilityBillDate = utilityBillDate.text.toString()
-
-        //validations
-//        if(utilityBillName.isEmpty()){
-//            utilityBillName.error = "Please enter name"
-//        }
-//        if(utilityBillAmount.isEmpty()){
-//            utilityBillAmount.error = "Please enter Age"
-//            return
-//        }
-//        if(utilityBillDate.isEmpty()){
-//            utilityBillDate.error = "Please enter Salary"
-//            return
-//        }
-
-        //create unique ID for persons - to avoid overriding data
-        val utilityId = dbRef.push().key!!
-
-        val utility = UtilityModel(utilityId,utilityBillName,utilityBillAmount,utilityBillDate)
-
-        dbRef.child(utilityId).setValue(utility)
-            .addOnCompleteListener{
-                Toast.makeText(this,"Data inserted successfully", Toast.LENGTH_LONG).show()
-
-//                utilityBillName.text.clear()
-//                utilityBillAmount.text.clear()
-//                utilityBillDate.text.clear()
-
-            }.addOnFailureListener{ err->
-                Toast.makeText(this,"Error ${err.message}", Toast.LENGTH_LONG).show()
-            }
-    }
 }
-

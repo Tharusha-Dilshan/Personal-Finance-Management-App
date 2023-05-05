@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,77 +8,41 @@
     android:background="@drawable/page_bg"
     tools:context=".UtilityFetchingActivity">
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="420dp"
-        android:layout_height="619dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <TextView
+        android:id="@+id/UtilityText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/UtilityEX"
+        android:textAlignment="center"
+        android:textColor="#2B4865"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
-
-        <TextView
-            android:id="@+id/Utility"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:text="@string/utility"
-            android:textAlignment="center"
-            android:textColor="#2B4865"
-            android:textSize="30sp"
-            android:textStyle="bold" />
-
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="586dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="vertical">
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rvEmp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="554dp"
-                    android:layout_marginStart="1dp"
-                    android:layout_marginTop="1dp"
-                    android:layout_marginEnd="1dp"
-                    android:layout_marginBottom="1dp"
-                    android:layout_marginLeft="5dp"
-                    tools:listitem="@layout/expenses_utility_item">
-
-                </androidx.recyclerview.widget.RecyclerView>
-
-                <TextView
-                    android:id="@+id/tvLoadingData"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Loading Data....."
-                    android:textColor="@color/black"
-                    android:textSize="28sp"
-                    android:textStyle="bold"
-                    android:visibility="gone" />
-
-            </LinearLayout>
-
-        </ScrollView>
-
-    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="565dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="106dp"
+        android:scrollbars="vertical"
+        tools:listitem="@layout/expenses_utility_item" />
 
     <LinearLayout
-        android:layout_width="411dp"
-        android:layout_height="83dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="80dp"
+        android:layout_marginBottom="50dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView">
 
         <TextView
-            android:id="@+id/textView15"
+            android:id="@+id/textTotalAmount"
             android:layout_width="25dp"
             android:layout_height="40dp"
             android:layout_marginLeft="15dp"
@@ -96,26 +61,18 @@
             android:text="0"
             android:textColor="@color/black"
             android:textSize="20sp" />
-
     </LinearLayout>
-    <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/addUtility"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:layout_margin="40dp"
-            android:src="@drawable/add_icon_"
-            android:backgroundTint="@color/darkBlue"
-            app:tint="@color/white"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@id/addHealth"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="40dp"
+        android:src="@drawable/add_icon_"
+        android:backgroundTint="@color/darkBlue"
+        app:tint="@color/lightGray_bg">
 
-    </RelativeLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+</RelativeLayout>

@@ -28,7 +28,7 @@
                 android:id="@+id/topic"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Insert Data"
+                android:text="Insert Utility Bill Data"
                 android:textStyle="bold"
                 android:textSize="30sp"
                 android:textAlignment="center"
@@ -38,10 +38,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:id="@+id/utilityBillName"
-
                 android:layout_marginTop="20dp"
                 android:padding="16dp"
                 android:hint="Enter Bill Name"
+                android:background="@drawable/cardview_boarder"
                 android:gravity="start|center_vertical"
                 android:textColor="@color/darkBlue"/>
 
@@ -49,10 +49,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:id="@+id/utilityBillAmount"
-
                 android:layout_marginTop="20dp"
                 android:padding="16dp"
                 android:hint="Enter Bill Amount"
+                android:background="@drawable/cardview_boarder"
                 android:gravity="start|center_vertical"
                 android:textColor="@color/darkBlue"/>
 
@@ -61,7 +61,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:id="@+id/utilityBillDate"
-
+                android:background="@drawable/cardview_boarder"
                 android:layout_marginTop="20dp"
                 android:padding="16dp"
                 android:hint="Enter the Billing Date"
