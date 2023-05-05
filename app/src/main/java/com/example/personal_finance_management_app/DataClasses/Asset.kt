@@ -6,5 +6,5 @@ data class Asset(var accNumber: String? = null,
                  var intrestRate: String? = null,
                  var duration: String? = null,
                  var amount: String? = null,
-                 var uid: String? = null,
+
 )
