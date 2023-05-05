@@ -358,7 +358,7 @@
                     app:layout_constraintHorizontal_bias="0.35"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/icon_logout" />
+                    app:srcCompat="@drawable/logoutimg" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </ScrollView>
