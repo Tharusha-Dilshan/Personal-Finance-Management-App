@@ -13,6 +13,7 @@ class LoanCalculator : AppCompatActivity() {
     private lateinit var interestRateEditText: EditText
     private lateinit var loanTermEditText: EditText
     private lateinit var calculateButton: Button
+    private lateinit var loanCancelBtn: Button
     private lateinit var resultTextView: TextView
 
 
@@ -25,6 +26,7 @@ class LoanCalculator : AppCompatActivity() {
         interestRateEditText = findViewById(R.id.interestRateEditText)
         loanTermEditText = findViewById(R.id.loanTermEditText)
         calculateButton = findViewById(R.id.calculateButton)
+        loanCancelBtn = findViewById(R.id.loanCancelBtn)
         resultTextView = findViewById(R.id.resultTextView)
 
         calculateButton.setOnClickListener {
@@ -34,6 +36,12 @@ class LoanCalculator : AppCompatActivity() {
 
             val monthlyPayment = calculateMonthlyPayment(loanAmount, interestRate, loanTerm)
             resultTextView.text = "Monthly Payment: RS ${"%.2f".format(monthlyPayment)}"
+        }
+        loanCancelBtn.setOnClickListener{
+            loanAmountEditText.text.clear()
+            interestRateEditText.text.clear()
+            loanTermEditText.text.clear()
+            resultTextView.text = ""
         }
     }
 

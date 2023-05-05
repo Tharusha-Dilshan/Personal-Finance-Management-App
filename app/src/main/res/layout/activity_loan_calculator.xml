@@ -16,14 +16,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/mlogo" />
 
         <TextView
             android:id="@+id/loanCalMainText"
             android:layout_width="match_parent"
             android:layout_height="46dp"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="35dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="30dp"
             android:text="Loan Calculator"
@@ -68,17 +73,16 @@
             android:textSize="24sp" />
 
 
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="86dp"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/calculateButton"
-                android:layout_width="200dp"
+                android:layout_width="160dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
+                android:layout_marginLeft="30dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="16dp"
@@ -87,22 +91,35 @@
                 android:foregroundTintMode="add"
                 android:text="Calculate" />
 
-            <TextView
-                android:id="@+id/resultTextView"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
+
+            <Button
+                android:id="@+id/loanCancelBtn"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="16dp"
-                android:backgroundTint="@color/Teal"
-                android:backgroundTintMode="screen"
-                android:ems="10"
-                android:hint="0.00"
-                android:textAlignment="center"
-                android:textSize="24sp" />
+                android:backgroundTint="@android:color/holo_red_light"
+                android:drawableRight="@drawable/cross_mark"
+                android:text="Clear" />
 
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/resultTextView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/Teal"
+            android:backgroundTintMode="screen"
+            android:ems="10"
+            android:hint="0.00"
+            android:textAlignment="center"
+            android:textSize="24sp" />
 
     </LinearLayout>
 
