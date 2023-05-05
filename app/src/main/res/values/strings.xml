@@ -130,4 +130,6 @@
         <item>Other</item>
     </string-array>
 
+    <item name="addHealth" type="id" />
+    <item name="addTel" type="id" />
 </resources>

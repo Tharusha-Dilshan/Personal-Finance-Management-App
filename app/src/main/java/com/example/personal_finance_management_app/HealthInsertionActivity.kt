@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.personal_finance_management_app.DataClasses.Asset
+import com.example.personal_finance_management_app.DataClasses.HealthModel
 import com.example.personal_finance_management_app.databinding.ActivityDashHomeBinding
 import com.example.personal_finance_management_app.databinding.ActivityHealthInsertionBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -36,27 +37,27 @@ class HealthInsertionActivity : AppCompatActivity() {
             var healthBillDate = binding.healthBillDate.text.toString()
 
 
-            if(healthBillName.isEmpty() ||healthBillAmount.isEmpty() ||healthBillDate.isEmpty()){
+            if(healthBillName.isEmpty() ||healthBillAmount.isEmpty() ||healthBillDate.isEmpty()) {
 
-                if(healthBillName.isEmpty()){
+                if (healthBillName.isEmpty()) {
                     binding.healthBillName.error = "Enter Bill name"
                 }
-                if(healthBillAmount.isEmpty()){
+                if (healthBillAmount.isEmpty()) {
                     binding.healthBillAmount.error = "Enter Bill Amount"
                 }
-                if(healthBillDate.isEmpty()){
+                if (healthBillDate.isEmpty()) {
                     binding.healthBillDate.error = "Enter the Billing Date"
                 }
-
+            }else {
                 //Id for new record
                 var id = databaseRef.push().key!!
                 //create a Asset object
-                val asset = Asset( healthBillName,healthBillAmount,healthBillDate)
-                databaseRef.child(id).setValue(asset).addOnCompleteListener {
+                val health = HealthModel( healthBillName,healthBillAmount,healthBillDate)
+                databaseRef.child(id).setValue(health).addOnCompleteListener {
                     if (it.isSuccessful){
+                        Toast.makeText(this, "Your Data Added successfully", Toast.LENGTH_SHORT).show()
                         intent = Intent(applicationContext, HealthFetchingActivity::class.java)
                         startActivity(intent)
-                        Toast.makeText(this, "Your Data Added successfully", Toast.LENGTH_SHORT).show()
                     } else {
                         Toast.makeText(this, it.exception?.message, Toast.LENGTH_SHORT).show()
                     }
