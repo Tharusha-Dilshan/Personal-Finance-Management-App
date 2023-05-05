@@ -30,6 +30,13 @@
             android:name=".LoanCalculator"
             android:exported="true"/>
         <activity
+            android:name=".CurrencyConvertor"
+            android:exported="true"
+            />
+        <activity
+            android:name=".LoanCalculator"
+            android:exported="true"/>
+        <activity
             android:name=".PortEditAsset"
             android:exported="true" >
 
