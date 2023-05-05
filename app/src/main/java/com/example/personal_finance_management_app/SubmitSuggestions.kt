@@ -51,10 +51,10 @@ class SubmitSuggestions : AppCompatActivity() {
                 //Id for new record
                 var id = databaseRef.push().key!!
                 //create a Asset object
-                val asset = SuggestionModel(id,bankName,finType,addedSug,)
-                databaseRef.child(id).setValue(asset).addOnCompleteListener {
+                val suggestion = SuggestionModel(id,bankName,finType,addedSug,)
+                databaseRef.child(id).setValue(suggestion).addOnCompleteListener {
                     if (it.isSuccessful){
-                        intent = Intent(applicationContext, FinanceActivity::class.java)
+                        intent = Intent(applicationContext, FetchingSuggestions::class.java)
                         startActivity(intent)
                         Toast.makeText(this, "Your Suggestion added successfully", Toast.LENGTH_SHORT).show()
                     } else {
@@ -62,6 +62,9 @@ class SubmitSuggestions : AppCompatActivity() {
                     }
                 }
             }
+        }
+        binding.sugCancelBtn.setOnClickListener{
+            binding.sugInputField.text?.clear()
         }
     }
 }

@@ -18,34 +18,35 @@ class SugAdapter(private val sugList: ArrayList<SuggestionModel>) :
         fun onItemClick(position: Int)
     }
 
-    fun setOnItemClickListener(clickListener: onItemClickListener){
-        mListener = clickListener
+    fun setOnItemClickListener(listener: onItemClickListener){
+        mListener = listener
+    }
+    inner class ViewHolder(itemView: View, listener: onItemClickListener) : RecyclerView.ViewHolder(itemView) {
+
+        val tvSuggestion : TextView = itemView.findViewById(R.id.tvSuggestion)
+
+        init {
+            itemView.setOnClickListener {
+                listener.onItemClick(adapterPosition)
+            }
+        }
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.sugge_list_item, parent, false)
         return ViewHolder(itemView, mListener)
     }
-
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val currentSuggestion = sugList[position]
-        holder.tvSuggestion.text = currentSuggestion.suggetion
-    }
-
     override fun getItemCount(): Int {
         return sugList.size
     }
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-    class ViewHolder(itemView: View, clickListener: onItemClickListener) : RecyclerView.ViewHolder(itemView) {
-
-        val tvSuggestion : TextView = itemView.findViewById(R.id.tvSuggestion)
-
-        init {
-            itemView.setOnClickListener {
-                clickListener.onItemClick(adapterPosition)
-            }
-        }
-
+        holder.tvSuggestion.text = sugList[position].suggetion
     }
+
+
+
+
 
 }

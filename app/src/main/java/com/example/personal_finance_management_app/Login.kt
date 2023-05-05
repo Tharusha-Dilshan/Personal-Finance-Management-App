@@ -62,4 +62,12 @@ class Login : AppCompatActivity() {
         }
 
     }
+    override fun onStart() {
+        super.onStart()
+
+        if(auth.currentUser != null){
+            val intent = Intent(this, DashHome::class.java)
+            startActivity(intent)
+        }
+    }
 }
