@@ -11,20 +11,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PersonalFinanceManagementApp"
         tools:targetApi="31">
-
+        <activity
+            android:name=".UtilityInsertionActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UtilityFetchingActivity"
+            android:exported="true" />
         <activity
             android:name=".PortEditAsset"
-            android:exported="true" >
+            android:exported="true">
 
         </activity>
         <activity
             android:name=".PortAddAsset"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".DashHome"
@@ -38,6 +39,15 @@
         <activity
             android:name=".MainActivity"
             android:exported="true" />
+        <activity
+            android:name=".ExpensesActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
