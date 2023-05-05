@@ -50,10 +50,14 @@ class HealthFetchingActivity : AppCompatActivity() {
         databaseRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 hList.clear()
+
+                var totalAmount = 0.0 // Initialize the totalAmount variable to zero
+
                 for ( frSnapshot in snapshot.children){
                     val fr = frSnapshot.getValue(HealthModel::class.java)!!
                     if( fr != null){
                         hList.add(fr)
+                        totalAmount += fr.healthAmount!!.toDouble() // Add the amount of each health bill to the totalAmount variable
                     }
                 }
                 adapter.notifyDataSetChanged()
@@ -77,6 +81,6 @@ class HealthFetchingActivity : AppCompatActivity() {
         hList.add(HealthModel("Nawaloka Bill","200000","2023/04/23"))
     }
 
-
-
 }
+
+
