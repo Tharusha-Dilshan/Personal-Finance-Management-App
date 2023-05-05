@@ -51,7 +51,7 @@ class HealthInsertionActivity : AppCompatActivity() {
             }else {
                 //Id for new record
                 var id = databaseRef.push().key!!
-                //create a Asset object
+                //create a health object
                 val health = HealthModel( healthBillName,healthBillAmount,healthBillDate)
                 databaseRef.child(id).setValue(health).addOnCompleteListener {
                     if (it.isSuccessful){
