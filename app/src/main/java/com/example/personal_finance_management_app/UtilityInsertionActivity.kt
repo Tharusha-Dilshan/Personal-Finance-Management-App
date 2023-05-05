@@ -44,17 +44,17 @@ class UtilityInsertionActivity : AppCompatActivity() {
         val utilityBillDate = utilityBillDate.text.toString()
 
         //validations
-        if(utilityBillName.isEmpty()){
-            utilityBillName.error = "Please enter name"
-        }
-        if(utilityBillAmount.isEmpty()){
-            utilityBillAmount.error = "Please enter Age"
-            return
-        }
-        if(utilityBillDate.isEmpty()){
-            utilityBillDate.error = "Please enter Salary"
-            return
-        }
+//        if(utilityBillName.isEmpty()){
+//            utilityBillName.error = "Please enter name"
+//        }
+//        if(utilityBillAmount.isEmpty()){
+//            utilityBillAmount.error = "Please enter Age"
+//            return
+//        }
+//        if(utilityBillDate.isEmpty()){
+//            utilityBillDate.error = "Please enter Salary"
+//            return
+//        }
 
         //create unique ID for persons - to avoid overriding data
         val utilityId = dbRef.push().key!!
@@ -65,9 +65,9 @@ class UtilityInsertionActivity : AppCompatActivity() {
             .addOnCompleteListener{
                 Toast.makeText(this,"Data inserted successfully", Toast.LENGTH_LONG).show()
 
-                utilityBillName.text.clear()
-                utilityBillAmount.text.clear()
-                utilityBillDate.text.clear()
+//                utilityBillName.text.clear()
+//                utilityBillAmount.text.clear()
+//                utilityBillDate.text.clear()
 
             }.addOnFailureListener{ err->
                 Toast.makeText(this,"Error ${err.message}", Toast.LENGTH_LONG).show()

@@ -6,17 +6,18 @@ import android.os.Bundle
 import android.widget.Button
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
-class UtilityFetchingActivity : AppCompatActivity() {
-    private lateinit var addUtility: FloatingActionButton
+class TelecommunicationFetchingActivity : AppCompatActivity() {
+
+    private lateinit var addTel: FloatingActionButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_utility_fetching)
+        setContentView(R.layout.activity_telecommunication_fetching)
 
-        addUtility = findViewById(R.id.addUtility)
+        addTel = findViewById(R.id.addTel)
 
-        addUtility.setOnClickListener {
-            val intent = Intent(this, UtilityInsertionActivity::class.java)
+        addTel.setOnClickListener{
+            val intent = Intent(this, TelecommunicationInsertionActivity::class.java)
             startActivity(intent)
         }
     }

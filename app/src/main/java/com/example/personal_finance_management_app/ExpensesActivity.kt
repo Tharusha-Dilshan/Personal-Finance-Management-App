@@ -44,5 +44,10 @@ class ExpensesActivity : AppCompatActivity() {
             val intent = Intent(this, UtilityFetchingActivity::class.java)
             startActivity(intent)
         }
+
+        btnTelecommunication.setOnClickListener{
+            val intent = Intent(this, TelecommunicationFetchingActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

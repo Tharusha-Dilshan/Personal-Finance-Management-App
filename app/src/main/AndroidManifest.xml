@@ -12,6 +12,12 @@
         android:theme="@style/Theme.PersonalFinanceManagementApp"
         tools:targetApi="31">
         <activity
+            android:name=".TelecommunicationInsertionActivity"
+            android:exported="true" />
+        <activity
+            android:name=".TelecommunicationFetchingActivity"
+            android:exported="true" />
+        <activity
             android:name=".UtilityInsertionActivity"
             android:exported="true" />
         <activity
@@ -19,14 +25,10 @@
             android:exported="true" />
         <activity
             android:name=".PortEditAsset"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".PortAddAsset"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".DashHome"
             android:exported="true" />
