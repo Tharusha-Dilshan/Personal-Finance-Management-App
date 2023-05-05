@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SubmitSuggestions">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="410dp"
+        android:layout_height="758dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="393dp"
+                android:layout_height="840dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/custom_background">
+
+
+                <TextView
+                    android:id="@+id/sug_bank_name_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:hint="Select Bank"
+                    android:textSize="20sp"
+
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.087"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/sug_main_text"
+                    tools:text="@string/selectBank" />
+
+                <Spinner
+                    android:id="@+id/sug_bank_name"
+                    android:layout_width="325dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:entries="@array/bankNames"
+                    android:minHeight="48dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.367"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/sug_bank_name_text" />
+
+                <TextView
+                    android:id="@+id/sug_fin_type_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:hint="@string/selectType"
+                    android:textSize="20sp"
+
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.086"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/sug_bank_name"
+                    tools:text="@string/selectType" />
+
+                <Spinner
+                    android:id="@+id/sug_finance_type"
+                    android:layout_width="325dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:entries="@array/financeType"
+                    android:minHeight="48dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.338"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/sug_fin_type_text" />
+
+                <View
+                    android:id="@+id/rectangle3"
+                    android:layout_width="355dp"
+                    android:layout_height="250dp"
+                    android:layout_marginTop="48dp"
+                    android:background="@drawable/rectangle_shape"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.421"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/sug_finance_type" />
+
+                <ImageView
+                    android:id="@+id/sug_main_img"
+                    android:layout_width="153dp"
+                    android:layout_height="99dp"
+                    android:layout_marginTop="28dp"
+                    android:outlineProvider="none"
+
+                    android:scaleType="centerCrop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.726"
+                    app:layout_constraintStart_toEndOf="@+id/sug_app_logo"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/suggestions" />
+
+                <TextView
+                    android:id="@+id/sug_main_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="monospace"
+                    android:text="SUGGESTIONS"
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.887"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/sug_main_img" />
+
+                <ImageView
+                    android:id="@+id/sug_app_logo"
+                    android:layout_width="107dp"
+                    android:layout_height="127dp"
+
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.125"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/mlogo" />
+
+                <Button
+                    android:id="@+id/sug_add_btn"
+                    android:layout_width="147dp"
+                    android:layout_height="67dp"
+                    android:backgroundTint="@color/teal_700"
+                    android:drawableRight="@drawable/plus_math"
+                    android:text="ADD"
+                    app:layout_constraintBottom_toBottomOf="@+id/rectangle3"
+                    app:layout_constraintEnd_toStartOf="@+id/sug_cancel_btn"
+                    app:layout_constraintStart_toStartOf="@+id/rectangle3"
+                    app:layout_constraintTop_toBottomOf="@+id/sug_input_field"
+                    app:layout_constraintVertical_bias="0.476" />
+
+                <Button
+                    android:id="@+id/sug_cancel_btn"
+                    android:layout_width="137dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="40dp"
+                    android:backgroundTint="@android:color/holo_red_light"
+                    android:drawableRight="@drawable/cross_mark"
+                    android:text="Cancel"
+                    app:layout_constraintBottom_toBottomOf="@+id/rectangle3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/sug_input_field"
+                    app:layout_constraintVertical_bias="0.46" />
+
+                <Button
+                    android:id="@+id/sug_edit_btn"
+                    android:layout_width="222dp"
+                    android:layout_height="70dp"
+                    android:layout_marginEnd="152dp"
+                    android:backgroundTint="@color/garyBlue"
+                    android:drawableLeft="@drawable/editicon"
+                    android:text="Edit Suggetions"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rectangle3"
+                    app:layout_constraintVertical_bias="0.545"
+                    tools:text="@string/editSuggestion" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/sug_input_field"
+                    android:layout_width="275dp"
+                    android:layout_height="68dp"
+                    android:backgroundTint="#FFFFFF"
+                    android:hint="Add Your Suggestion Here.."
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/rectangle3"
+                    app:layout_constraintEnd_toEndOf="@+id/rectangle3"
+                    app:layout_constraintStart_toStartOf="@+id/rectangle3"
+                    app:layout_constraintTop_toTopOf="@+id/rectangle3"
+                    app:layout_constraintVertical_bias="0.225" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

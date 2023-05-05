@@ -8,8 +8,8 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="409dp"
-        android:layout_height="755dp"
+        android:layout_width="404dp"
+        android:layout_height="813dp"
         android:layout_marginTop="64dp"
         android:layout_marginBottom="10dp"
         android:background="@color/white"
@@ -177,7 +177,7 @@
                         android:orientation="vertical">
 
                         <ImageView
-                            android:id="@+id/imageView17"
+                            android:id="@+id/finimg"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:layout_marginStart="50dp"
@@ -302,8 +302,8 @@
                     android:id="@+id/imageView20"
                     android:layout_width="36dp"
                     android:layout_height="0dp"
-                    android:layout_marginStart="7dp"
-                    android:layout_marginTop="1dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="52dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/settingsicon" />
@@ -348,6 +348,17 @@
                     android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="@+id/view3"
                     app:layout_constraintTop_toTopOf="@+id/view3" />
+
+                <ImageView
+                    android:id="@+id/logoutbtn"
+                    android:layout_width="50dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="56dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.35"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/logoutimg" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </ScrollView>

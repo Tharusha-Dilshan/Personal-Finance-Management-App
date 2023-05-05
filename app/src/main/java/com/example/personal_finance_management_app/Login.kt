@@ -21,6 +21,7 @@ class Login : AppCompatActivity() {
         //Initializing auth
         auth = FirebaseAuth.getInstance()
 
+
         //set onclick listner on login button
         binding.LoginButton.setOnClickListener() {
 
@@ -60,6 +61,22 @@ class Login : AppCompatActivity() {
                 }
             }
         }
+        binding.RegistrationButton1.setOnClickListener{
+            intent = Intent(applicationContext, CreateAccount::class.java)
+            startActivity(intent)
+        }
+        binding.tvInstruction.setOnClickListener{
+            intent = Intent(applicationContext, CreateAccount::class.java)
+            startActivity(intent)
+        }
 
+    }
+    override fun onStart() {
+        super.onStart()
+
+        if(auth.currentUser != null){
+            val intent = Intent(this, DashHome::class.java)
+            startActivity(intent)
+        }
     }
 }
