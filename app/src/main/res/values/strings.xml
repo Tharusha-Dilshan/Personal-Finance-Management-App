@@ -72,6 +72,7 @@
     <string name="Eztitle">Ez Share</string>
 
     <string-array name="typeAsset">
+        <item>Select Type</item>
         <item>Fixed Deposit</item>
         <item>Savings</item>
         <item>Treasury Bill</item>
