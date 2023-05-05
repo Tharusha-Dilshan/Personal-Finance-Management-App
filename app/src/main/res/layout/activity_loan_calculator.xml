@@ -17,6 +17,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
 
+
         <TextView
             android:id="@+id/loanCalMainText"
             android:layout_width="match_parent"
@@ -66,26 +67,42 @@
             android:inputType="number"
             android:textSize="24sp" />
 
-        <Button
-            android:id="@+id/calculateButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="16dp"
-            android:text="Calculate" />
 
-        <TextView
-            android:id="@+id/resultTextView"
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="16dp"
-            android:textAlignment="center"
-            android:textSize="24sp" />
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/calculateButton"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="@color/Teal"
+                android:drawableRight="@drawable/calculator"
+                android:foregroundTintMode="add"
+                android:text="Calculate" />
+
+            <TextView
+                android:id="@+id/resultTextView"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="@color/Teal"
+                android:backgroundTintMode="screen"
+                android:ems="10"
+                android:hint="0.00"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
