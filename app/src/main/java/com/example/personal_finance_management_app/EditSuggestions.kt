@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.personal_finance_management_app.databinding.ActivityEditSuggestionsBinding
-import com.example.personal_finance_management_app.databinding.ActivityPortEditAssetBinding
+
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
