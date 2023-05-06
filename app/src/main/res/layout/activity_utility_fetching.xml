@@ -12,7 +12,7 @@
         android:id="@+id/UtilityText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="20dp"
         android:text="@string/UtilityEX"
         android:textAlignment="center"
         android:textColor="#2B4865"
@@ -23,7 +23,7 @@
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="565dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="70dp"
         android:layout_marginBottom="106dp"
         android:scrollbars="vertical"
         tools:listitem="@layout/expenses_utility_item" />
@@ -62,6 +62,19 @@
             android:textColor="@color/black"
             android:textSize="20sp" />
     </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@id/backBtn"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:src="@drawable/arrow_back"
+        android:backgroundTint="@color/Teal"
+        app:tint="@color/lightGray_bg">
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"

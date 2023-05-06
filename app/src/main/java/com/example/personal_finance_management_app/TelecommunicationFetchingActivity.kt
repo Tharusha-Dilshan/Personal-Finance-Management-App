@@ -34,6 +34,10 @@ class TelecommunicationFetchingActivity : AppCompatActivity() {
             intent = Intent(applicationContext,TelecommunicationInsertionActivity::class.java)
             startActivity(intent)
         }
+        binding.backBtn.setOnClickListener{
+            intent = Intent(applicationContext,ExpensesActivity::class.java)
+            startActivity(intent)
+        }
 
         //initialize variables
         auth = FirebaseAuth.getInstance()

@@ -31,6 +31,10 @@ class HealthFetchingActivity : AppCompatActivity() {
             intent = Intent(applicationContext, HealthInsertionActivity::class.java)
             startActivity(intent)
         }
+        binding.backBtn.setOnClickListener{
+            intent = Intent(applicationContext, ExpensesActivity::class.java)
+            startActivity(intent)
+        }
 
         //initialize variables
         auth = FirebaseAuth.getInstance()
