@@ -20,6 +20,31 @@
             android:name=".PreferencesActivity"
             android:exported="true" />
         <activity
+
+            android:name=".UtilityDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TelecommunicationDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HealthInsertionActivity"
+            android:exported="true" />
+        <activity
+            android:name=".HealthFetchingActivity"
+            android:exported="true" />
+        <activity
+            android:name=".TelecommunicationInsertionActivity"
+            android:exported="true" />
+        <activity
+            android:name=".TelecommunicationFetchingActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UtilityInsertionActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UtilityFetchingActivity"
+            android:exported="true" />
+        <activity
             android:name=".ViewAsset"
             android:exported="false" />
 
@@ -70,6 +95,9 @@
         <activity
             android:name=".MainActivity"
             android:exported="true" />
+        <activity
+            android:name=".ExpensesActivity"
+            android:exported="true"></activity>
     </application>
 
 </manifest>

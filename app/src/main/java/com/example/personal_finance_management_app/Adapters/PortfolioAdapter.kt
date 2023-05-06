@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.personal_finance_management_app.DataClasses.Asset
+import com.example.personal_finance_management_app.Portfolio
 import com.example.personal_finance_management_app.R
 
 class PortfolioAdapter (var mList: List<Asset>) :

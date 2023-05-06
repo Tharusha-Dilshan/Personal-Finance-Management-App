@@ -22,6 +22,10 @@ class DashHome : AppCompatActivity() {
             intent = Intent(applicationContext, FinanceActivity::class.java)
             startActivity(intent)
         }
+        binding.expensesimg.setOnClickListener {
+            intent = Intent(applicationContext, ExpensesActivity::class.java)
+            startActivity(intent)
+        }
 
         binding.logoutbtn.setOnClickListener{
             // Clear any saved user session data or preferences
