@@ -38,6 +38,10 @@ class FinanceActivity : AppCompatActivity() {
             intent = Intent(applicationContext, LoanCalculator::class.java)
             startActivity(intent)
         }
+        binding.prefimg.setOnClickListener{
+            intent = Intent(applicationContext, PreferencesActivity::class.java)
+            startActivity(intent)
+        }
 
 
     }

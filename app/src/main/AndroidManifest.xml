@@ -14,7 +14,13 @@
         android:theme="@style/Theme.PersonalFinanceManagementApp"
         tools:targetApi="31">
         <activity
-<<<<<<< HEAD
+            android:name=".SuggestionDetails"
+            android:exported="true" />
+        <activity
+            android:name=".PreferencesActivity"
+            android:exported="true" />
+        <activity
+
             android:name=".UtilityDetailsActivity"
             android:exported="false" />
         <activity
@@ -39,11 +45,10 @@
             android:name=".UtilityFetchingActivity"
             android:exported="true" />
         <activity
-=======
             android:name=".ViewAsset"
             android:exported="false" />
+
         <activity
->>>>>>> a5cb696941042c56555298366130dc2b8d643205
             android:name=".Calculators"
             android:exported="true" />
         <activity

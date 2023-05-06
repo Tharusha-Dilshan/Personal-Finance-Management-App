@@ -9,8 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.personal_finance_management_app.DataClasses.SuggestionModel
 import com.example.personal_finance_management_app.R
 
-class SugAdapter(private val sugList: ArrayList<SuggestionModel>) :
-    RecyclerView.Adapter<SugAdapter.ViewHolder>() {
+class PrefAdapter(private val sugList: ArrayList<SuggestionModel>) :
+    RecyclerView.Adapter<PrefAdapter.ViewHolder>() {
 
     private lateinit var mListener: onItemClickListener
 
@@ -23,9 +23,9 @@ class SugAdapter(private val sugList: ArrayList<SuggestionModel>) :
     }
     inner class ViewHolder(itemView: View, listener: onItemClickListener) : RecyclerView.ViewHolder(itemView) {
 
-        //val tvSuggestion : TextView = itemView.findViewById(R.id.tvSuggestion)
-        val tvBankName : TextView = itemView.findViewById(R.id.tvBankName)
-        val tvFinType : TextView = itemView.findViewById(R.id.tvFinType)
+        val tvSuggestion : TextView = itemView.findViewById(R.id.tvSuggestion2)
+        val tvBankName : TextView = itemView.findViewById(R.id.tvBankName2)
+        val tvFinType : TextView = itemView.findViewById(R.id.tvFinType2)
 
         init {
             itemView.setOnClickListener {
@@ -36,7 +36,7 @@ class SugAdapter(private val sugList: ArrayList<SuggestionModel>) :
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.sugge_list_item, parent, false)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.preferencess_list, parent, false)
         return ViewHolder(itemView, mListener)
     }
     override fun getItemCount(): Int {
@@ -44,7 +44,7 @@ class SugAdapter(private val sugList: ArrayList<SuggestionModel>) :
     }
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-        //holder.tvSuggestion.text = sugList[position].suggetion
+        holder.tvSuggestion.text = sugList[position].suggetion
         holder.tvBankName.text = sugList[position].bankName
         holder.tvFinType.text = sugList[position].finType
     }

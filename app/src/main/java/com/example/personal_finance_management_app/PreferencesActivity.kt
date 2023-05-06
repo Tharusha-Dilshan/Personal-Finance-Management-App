@@ -1,32 +1,33 @@
 package com.example.personal_finance_management_app
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.personal_finance_management_app.Adapters.PortfolioAdapter
+import com.example.personal_finance_management_app.Adapters.PrefAdapter
 import com.example.personal_finance_management_app.Adapters.SugAdapter
 import com.example.personal_finance_management_app.DataClasses.Asset
 import com.example.personal_finance_management_app.DataClasses.SuggestionModel
 import com.example.personal_finance_management_app.databinding.ActivityFetchingSuggetionsBinding
 import com.example.personal_finance_management_app.databinding.ActivityPortfolioBinding
+import com.example.personal_finance_management_app.databinding.ActivityPreferencesBinding
 
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
-class FetchingSuggestions : AppCompatActivity() {
+class PreferencesActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityFetchingSuggetionsBinding
+    private lateinit var binding: ActivityPreferencesBinding
     private lateinit var auth: FirebaseAuth
     private lateinit var databaseRef: DatabaseReference
     private lateinit var uid:String
     private var mList = ArrayList<SuggestionModel>()
-    private lateinit var adapter: SugAdapter
+    private lateinit var adapter: PrefAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityFetchingSuggetionsBinding.inflate(layoutInflater)
+        binding = ActivityPreferencesBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
 
@@ -34,17 +35,17 @@ class FetchingSuggestions : AppCompatActivity() {
         //initialize variables
         auth = FirebaseAuth.getInstance()
         uid = auth.currentUser?.uid.toString()
-        databaseRef = FirebaseDatabase.getInstance().reference.child("FinanceSuggestions").child(uid)
-        //databaseRef = FirebaseDatabase.getInstance().getReference("AllFinSuggestions")
+        //databaseRef = FirebaseDatabase.getInstance().reference.child("FinanceSuggestions").child(uid)
+        databaseRef = FirebaseDatabase.getInstance().getReference("AllFinSuggestions")
 //        Toast.makeText(this, uid, Toast.LENGTH_SHORT).show()
 
-        var recyclerView = binding.rvSuggestion
+        var recyclerView = binding.rvSuggestion2
 
         recyclerView.setHasFixedSize(true)
         recyclerView.layoutManager = LinearLayoutManager(this);
 
         //addDataToList()
-        adapter = SugAdapter(mList)
+        adapter = PrefAdapter(mList)
         recyclerView.adapter = adapter
 
         databaseRef.addValueEventListener(object : ValueEventListener {
@@ -60,23 +61,15 @@ class FetchingSuggestions : AppCompatActivity() {
             }
 
             override fun onCancelled(error: DatabaseError) {
-                Toast.makeText(this@FetchingSuggestions, error.message, Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@PreferencesActivity, error.message, Toast.LENGTH_SHORT).show()
             }
         })
 
         //Setting onclick on recyclerView each item
-        adapter.setOnItemClickListener(object:SugAdapter.onItemClickListener{
+        adapter.setOnItemClickListener(object:PrefAdapter.onItemClickListener{
             override fun onItemClick(position: Int) {
-                val intent = Intent(this@FetchingSuggestions, SuggestionDetails::class.java)
-
-                //put extras
-                intent.putExtra("sugId", mList[position].sugId)
-                intent.putExtra("bankName", mList[position].bankName)
-                intent.putExtra("finType", mList[position].finType)
-                intent.putExtra("suggetion", mList[position].suggetion)
-                startActivity(intent)
 
             }
         })
-        }
     }
+}
