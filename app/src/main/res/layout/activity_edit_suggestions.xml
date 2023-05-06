@@ -4,48 +4,98 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EditSuggestions">
+    tools:context=".EditSuggestions"
+    android:background="@drawable/page_bg"
+    >
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="171dp"
+        android:layout_height="102dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/mlogo" />
+
+    <TextView
+        android:id="@+id/topicEditSug"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="10dp">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:text="Update Suggestion"
+        android:textAlignment="center"
+        android:textColor="@color/darkBlue"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:id="@+id/etBankName"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginEnd="30dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:hint="Bank Name"
-            android:inputType="textPersonName" />
+            android:layout_height="match_parent"
+            android:background="@drawable/cardview_boarder"
+            android:orientation="vertical"
+            android:padding="10dp">
 
-        <EditText
-            android:id="@+id/etFinType"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:ems="10"
-            android:hint="Finance Type" />
+            <EditText
+                android:id="@+id/etBankName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/cardview_boarder"
+                android:hint="Bank Name"
+                android:inputType="textPersonName"
+                android:padding="16dp"
+                android:textColor="@color/darkBlue" />
 
-        <EditText
-            android:id="@+id/etSuggestion"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:ems="10"
-            android:hint="Suggestion"
-            android:inputType="textPersonName" />
+            <EditText
+                android:id="@+id/etFinType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/cardview_boarder"
+                android:ems="10"
+                android:hint="Finance Type"
+                android:padding="16dp"
+                android:textColor="@color/darkBlue" />
 
-        <Button
-            android:id="@+id/btnUpdateData"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:text="Update Data" />
+            <EditText
+                android:id="@+id/etSuggestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/cardview_boarder"
+                android:ems="10"
+                android:hint="Suggestion"
+                android:inputType="textPersonName"
+                android:padding="16dp"
+                android:textColor="@color/darkBlue" />
+
+            <Button
+                android:id="@+id/btnUpdateData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/btn_background"
+                android:text="Update Data" />
 
 
-    </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
