@@ -53,7 +53,7 @@ class SubmitSuggestions : AppCompatActivity() {
                 //Id for new record
                 var id = databaseRef.push().key!!
                 var id2 = databaseRef2.push().key!!
-                //create a Asset object
+                //create a suggestion object
                 val suggestion = SuggestionModel(id,bankName,finType,addedSug,)
                 val suggestion2 = SuggestionModel(id2,bankName,finType,addedSug,)
                 databaseRef.child(id).setValue(suggestion).addOnCompleteListener {

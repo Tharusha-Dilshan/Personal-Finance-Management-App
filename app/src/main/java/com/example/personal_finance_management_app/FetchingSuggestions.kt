@@ -1,5 +1,6 @@
 package com.example.personal_finance_management_app
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -66,6 +67,14 @@ class FetchingSuggestions : AppCompatActivity() {
         //Setting onclick on recyclerView each item
         adapter.setOnItemClickListener(object:SugAdapter.onItemClickListener{
             override fun onItemClick(position: Int) {
+                val intent = Intent(this@FetchingSuggestions, SuggestionDetails::class.java)
+
+                //put extras
+                intent.putExtra("sugId", mList[position].sugId)
+                intent.putExtra("bankName", mList[position].bankName)
+                intent.putExtra("finType", mList[position].finType)
+                intent.putExtra("suggetion", mList[position].suggetion)
+                startActivity(intent)
 
             }
         })

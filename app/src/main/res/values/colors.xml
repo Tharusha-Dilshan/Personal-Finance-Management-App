@@ -25,5 +25,6 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="amount_background">#ffe0b2</color>
+    <color name="divider_grey">#E9E9E9</color>
 
 </resources>
