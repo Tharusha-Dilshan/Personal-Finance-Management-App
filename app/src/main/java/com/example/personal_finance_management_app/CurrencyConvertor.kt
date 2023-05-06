@@ -19,7 +19,8 @@ class CurrencyConvertor : AppCompatActivity() {
     private var exchangeRate: Double = 1.0
     private lateinit var button_convert : Button
     private lateinit var editText_amount : EditText
-    private lateinit var textView_result : TextView
+    private lateinit var textViewFromResult : TextView
+    private lateinit var textViewToResult : TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,7 +31,8 @@ class CurrencyConvertor : AppCompatActivity() {
         val spinnerTo = findViewById<Spinner>(R.id.spinner_to)
         button_convert = findViewById(R.id.button_convert)
         editText_amount = findViewById(R.id.editText_amount)
-        textView_result = findViewById(R.id.textView_result)
+        textViewFromResult = findViewById(R.id.textViewFromResult)
+        textViewToResult = findViewById(R.id.textViewToResult)
 
 
 
@@ -74,7 +76,8 @@ class CurrencyConvertor : AppCompatActivity() {
             val amount = editText_amount.text.toString().toDoubleOrNull() ?: 0.0
             val result = amount * exchangeRate
             val formatter = DecimalFormat("#,###.##")
-            textView_result.text = "${formatter.format(amount)} $fromCurrency = ${formatter.format(result)} $toCurrency"
+            textViewFromResult.text = "${formatter.format(amount)} $fromCurrency"
+            textViewToResult.text = "${formatter.format(result)} $toCurrency"
         }
     }
 

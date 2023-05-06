@@ -19,6 +19,7 @@
     <string name="bName">Bank Name</string>
     <string name="rate">Current Rates</string>
     <string-array name="financeType">
+        <item>Select Finance Type</item>
         <item>Fixed Deposit</item>
         <item>Loan</item>
         <item>Leasings</item>
@@ -27,6 +28,7 @@
     </string-array>
     <!-- IT21259302 Narasinghe N.M.N.N -->
     <string-array name="bankNames">
+        <item>Select The Bank</item>
         <item>BOC</item>
         <item>NSB</item>
         <item>Com-Bank</item>

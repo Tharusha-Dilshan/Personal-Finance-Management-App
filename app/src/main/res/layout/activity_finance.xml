@@ -70,65 +70,17 @@
             app:srcCompat="@drawable/mlogo" />
 
         <LinearLayout
-            android:id="@+id/linearLayout4"
-            android:layout_width="match_parent"
-            android:layout_height="123dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:background="@drawable/rectangle_shape"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent">
-
-            <ImageView
-                android:id="@+id/rateimg"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/buttonbacgroundupdate"
-                android:scaleType="centerInside"
-                app:srcCompat="@drawable/ratefin2"
-                tools:layout_editor_absoluteX="2dp"
-                tools:layout_editor_absoluteY="294dp" />
-
-            <ImageView
-                android:id="@+id/prefimg"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/buttonbacgroundupdate"
-                android:scaleType="centerInside"
-                app:srcCompat="@drawable/preffin2" />
-
-            <ImageView
-                android:id="@+id/sugimg"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/buttonbacgroundupdate"
-                android:outlineProvider="background"
-                android:scaleType="centerInside"
-                app:srcCompat="@drawable/sugfin2"
-                tools:layout_editor_absoluteX="277dp"
-                tools:layout_editor_absoluteY="294dp" />
-
-        </LinearLayout>
-
-        <LinearLayout
             android:id="@+id/linearLayout5"
             android:layout_width="match_parent"
             android:layout_height="28dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:layout_marginBottom="328dp"
             android:background="@drawable/rectangle_shape"
             android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
 
             <TextView
                 android:id="@+id/rates"
@@ -136,7 +88,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:fontFamily="monospace"
-                android:text="RATINGS"
+                android:text="RATES"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="18sp"
@@ -224,13 +176,13 @@
             android:layout_width="match_parent"
             android:layout_height="28dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="123dp"
             android:layout_marginRight="10dp"
             android:background="@drawable/rectangle_shape"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
+            app:layout_constraintTop_toTopOf="@+id/linearLayout6">
 
             <TextView
                 android:id="@+id/loantxt"
@@ -271,6 +223,55 @@
                 android:textStyle="bold"
                 tools:layout_editor_absoluteX="2dp"
                 tools:layout_editor_absoluteY="417dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="123dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/rectangle_shape"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/finance"
+            app:layout_constraintVertical_bias="0.255">
+
+            <ImageView
+                android:id="@+id/rateimg"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/buttonbacgroundupdate"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/ratefin2"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="321dp" />
+
+            <ImageView
+                android:id="@+id/prefimg"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/buttonbacgroundupdate"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/preffin2" />
+
+            <ImageView
+                android:id="@+id/sugimg"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/buttonbacgroundupdate"
+                android:outlineProvider="background"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/sugfin2"
+                tools:layout_editor_absoluteX="269dp"
+                tools:layout_editor_absoluteY="321dp" />
+
         </LinearLayout>
 
 

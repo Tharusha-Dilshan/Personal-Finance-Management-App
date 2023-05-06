@@ -5,19 +5,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FetchingSuggestions">
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvSuggestion"
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="1dp"
-        tools:listitem="@layout/sugge_list_item"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/viewSuggestionHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:text="Edit Suggestions"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSuggestion"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            tools:listitem="@layout/sugge_list_item" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/tvLoadingData"
