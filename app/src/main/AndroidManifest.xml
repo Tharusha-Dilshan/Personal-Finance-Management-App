@@ -17,6 +17,9 @@
             android:name=".UtilityUpdateDetailsActivity"
             android:exported="true" />
         <activity
+            android:name=".EditSuggestions"
+            android:exported="true" />
+        <activity
             android:name=".SuggestionDetails"
             android:exported="true" />
         <activity
@@ -49,7 +52,6 @@
         <activity
             android:name=".ViewAsset"
             android:exported="false" />
-
         <activity
             android:name=".Calculators"
             android:exported="true" />

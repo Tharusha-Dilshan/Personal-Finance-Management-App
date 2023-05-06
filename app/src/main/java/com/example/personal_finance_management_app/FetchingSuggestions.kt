@@ -67,14 +67,16 @@ class FetchingSuggestions : AppCompatActivity() {
         //Setting onclick on recyclerView each item
         adapter.setOnItemClickListener(object:SugAdapter.onItemClickListener{
             override fun onItemClick(position: Int) {
-                val intent = Intent(this@FetchingSuggestions, SuggestionDetails::class.java)
 
-                //put extras
-                intent.putExtra("sugId", mList[position].sugId)
-                intent.putExtra("bankName", mList[position].bankName)
-                intent.putExtra("finType", mList[position].finType)
-                intent.putExtra("suggetion", mList[position].suggetion)
-                startActivity(intent)
+
+                intent = Intent(applicationContext, SuggestionDetails::class.java).also {
+                    it.putExtra("sugId", mList[position].sugId)
+                    it.putExtra("bankName", mList[position].bankName)
+                    it.putExtra("finType", mList[position].finType)
+                    it.putExtra("suggetion", mList[position].suggetion)
+
+                    startActivity(it)
+                }
 
             }
         })
