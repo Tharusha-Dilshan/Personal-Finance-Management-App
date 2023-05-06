@@ -1,63 +1,70 @@
 package com.example.personal_finance_management_app
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
 import com.example.personal_finance_management_app.DataClasses.TelecommunicationModel
-import com.example.personal_finance_management_app.databinding.ActivityPortAddAssetBinding
+import com.example.personal_finance_management_app.databinding.ActivityTelecommunicationInsertionBinding
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
 class TelecommunicationInsertionActivity : AppCompatActivity() {
-
-    //Initialize views
-    private lateinit var telBillName: EditText
-    private lateinit var telBillAmount: EditText
-    private lateinit var telBillDate: EditText
-    private lateinit var telSaveButton: Button
-
-    private lateinit var binding: ActivityPortAddAssetBinding
-
-    //database reference
-    private lateinit var dbRef: DatabaseReference
+    private lateinit var binding: ActivityTelecommunicationInsertionBinding
+    private lateinit var auth: FirebaseAuth
+    private lateinit var databaseRef: DatabaseReference
+    private lateinit var uid: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_telecommunication_insertion)
+        binding = ActivityTelecommunicationInsertionBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        telBillName = findViewById(R.id.telBillName)
-        telBillAmount = findViewById(R.id.telBillAmount)
-        telBillDate = findViewById(R.id.telBillDate)
+        //initialize variables
+        auth = FirebaseAuth.getInstance()
+        uid = auth.currentUser?.uid.toString()
+        databaseRef = FirebaseDatabase.getInstance().reference
+            .child("telecommunication").child(uid)
 
-        dbRef = FirebaseDatabase.getInstance().getReference("Telecommunication")
+        binding.teleSaveButton.setOnClickListener{
 
-        telSaveButton.setOnClickListener {
-            saveTelecommunicationData()
-        }
-    }
+            var teleBillName = binding.teleBillName.text.toString()
+            var teleBillAmount = binding.teleBillAmount.text.toString()
+            var teleBillDate = binding.teleBillDate.text.toString()
 
-    private fun saveTelecommunicationData() {
 
-        //getting values
-        val telBillName = telBillName.text.toString()
-        val telBillAmount = telBillAmount.text.toString()
-        val telBillDate = telBillDate.text.toString()
+            if(teleBillName.isEmpty() || teleBillAmount.isEmpty() || teleBillDate.isEmpty()) {
 
-        //validations
+                if (teleBillName.isEmpty()) {
+                    binding.teleBillName.error = "Enter Bill name"
+                }
+                if (teleBillAmount.isEmpty()) {
+                    binding.teleBillAmount.error = "Enter Bill Amount"
+                }
+                if (teleBillDate.isEmpty()) {
+                    binding.teleBillDate.error = "Enter the Billing Date"
+                }
+            }else {
+                //Id for new record
+                var id = databaseRef.push().key!!
+                //create a health object
+                val tele = TelecommunicationModel( teleBillName,teleBillAmount,teleBillDate)
+                databaseRef.child(id).setValue(tele).addOnCompleteListener {
+                    if (it.isSuccessful){
+                        Toast.makeText(this, "Your Data Added successfully", Toast.LENGTH_SHORT).show()
 
-        //create unique ID for persons - to avoid overriding data
-        val telId = dbRef.push().key!!
+                        binding.teleBillName.text.clear()
+                        binding.teleBillAmount.text.clear()
+                        binding.teleBillDate.text.clear()
 
-        val telecommunication =
-            TelecommunicationModel(telId, telBillName, telBillAmount, telBillDate)
-
-        dbRef.child(telId).setValue(telecommunication)
-            .addOnCompleteListener {
-                Toast.makeText(this, "Data inserted successfully", Toast.LENGTH_LONG).show()
-            }.addOnFailureListener{ err->
-                Toast.makeText(this,"Error ${err.message}", Toast.LENGTH_LONG).show()
+                        intent = Intent(applicationContext, TelecommunicationFetchingActivity::class.java)
+                        startActivity(intent)
+                    } else {
+                        Toast.makeText(this, it.exception?.message, Toast.LENGTH_SHORT).show()
+                    }
+                }
             }
+        }
     }
 }

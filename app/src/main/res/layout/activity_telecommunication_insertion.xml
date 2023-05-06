@@ -26,7 +26,7 @@
             android:background="@drawable/cardview_boarder">
 
             <TextView
-                android:id="@+id/topic"
+                android:id="@+id/Teletopic"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Insert Telecommunication Bill Data"
@@ -38,7 +38,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:id="@+id/telBillName"
+                android:id="@+id/teleBillName"
                 android:background="@drawable/cardview_boarder"
                 android:layout_marginTop="20dp"
                 android:padding="16dp"
@@ -49,7 +49,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:id="@+id/telBillAmount"
+                android:id="@+id/teleBillAmount"
                 android:background="@drawable/cardview_boarder"
                 android:layout_marginTop="20dp"
                 android:padding="16dp"
@@ -59,20 +59,21 @@
 
 
             <EditText
+                android:id="@+id/teleBillDate"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:id="@+id/telBillDate"
-                android:background="@drawable/cardview_boarder"
                 android:layout_marginTop="20dp"
-                android:padding="16dp"
-                android:hint="Enter the Billing Date"
+                android:background="@drawable/cardview_boarder"
                 android:gravity="start|center_vertical"
-                android:textColor="@color/darkBlue"/>
+                android:hint="Enter the Billing Date"
+                android:singleLine="true"
+                android:padding="16dp"
+                android:textColor="@color/darkBlue" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:id="@+id/telSaveButton"
+                android:id="@+id/teleSaveButton"
                 android:text="Save"
                 android:textSize="18dp"
                 android:textColor="@color/white"
