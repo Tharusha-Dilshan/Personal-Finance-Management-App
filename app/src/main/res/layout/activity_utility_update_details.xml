@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/page_bg">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:padding="20dp"
+            android:background="@drawable/cardview_boarder">
+
+            <TextView
+                android:id="@+id/topic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Update Utility Bill Data"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:textAlignment="center"
+                android:textColor="@color/darkBlue"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/utilityBillName"
+                android:layout_marginTop="20dp"
+                android:padding="16dp"
+                android:hint="Enter Bill Name"
+                android:background="@drawable/cardview_boarder"
+                android:gravity="start|center_vertical"
+                android:textColor="@color/darkBlue"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/utilityBillAmount"
+                android:layout_marginTop="20dp"
+                android:padding="16dp"
+                android:hint="Enter Bill Amount"
+                android:background="@drawable/cardview_boarder"
+                android:gravity="start|center_vertical"
+                android:textColor="@color/darkBlue"/>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/utilityBillDate"
+                android:background="@drawable/cardview_boarder"
+                android:layout_marginTop="20dp"
+                android:padding="16dp"
+                android:hint="Enter the Billing Date"
+                android:singleLine="true"
+                android:gravity="start|center_vertical"
+                android:textColor="@color/darkBlue"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/utilitySaveButton"
+                android:text="Save"
+                android:textSize="18dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_background"
+                app:cornerRadius = "20dp"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</ScrollView>

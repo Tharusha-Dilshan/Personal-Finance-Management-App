@@ -66,7 +66,6 @@ class Login : AppCompatActivity() {
             startActivity(intent)
         }
 
-
     }
     override fun onStart() {
         super.onStart()

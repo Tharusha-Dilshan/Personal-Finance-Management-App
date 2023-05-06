@@ -52,7 +52,7 @@ class UtilityInsertionActivity : AppCompatActivity() {
                 //Id for new record
                 var id = databaseRef.push().key!!
                 //create a health object
-                val utility = UtilityModel( utilityBillName,utilityBillAmount,utilityBillDate)
+                val utility = UtilityModel( utilityBillName,utilityBillAmount,utilityBillDate,id)
                 databaseRef.child(id).setValue(utility).addOnCompleteListener {
                     if (it.isSuccessful){
                         Toast.makeText(this, "Your Data Added successfully", Toast.LENGTH_SHORT).show()
