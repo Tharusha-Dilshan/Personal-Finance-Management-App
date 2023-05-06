@@ -207,6 +207,8 @@
                     android:layout_marginTop="30dp"
                     android:layout_marginLeft="50dp"
                     android:layout_marginBottom="20dp"
+                    android:backgroundTint="@color/darkBlue"
+                    android:textColor="@color/white"
                     android:text="Update" />
 
                 <Button
@@ -214,10 +216,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="30dp"
-                    android:layout_marginLeft="60dp"
+                    android:layout_marginLeft="50dp"
                     android:layout_marginBottom="20dp"
                     android:text="Delete"
-                    android:backgroundTint="@color/redN"/>
+                    android:backgroundTint="@color/redN"
+                    android:textColor="@color/white"/>
             </LinearLayout>
 
 
