@@ -34,6 +34,10 @@ class UtilityFetchingActivity : AppCompatActivity() {
             intent = Intent(applicationContext, UtilityInsertionActivity::class.java)
             startActivity(intent)
         }
+        binding.backBtn.setOnClickListener{
+            intent = Intent(applicationContext, ExpensesActivity::class.java)
+            startActivity(intent)
+        }
 
         //initialize variables
         auth = FirebaseAuth.getInstance()
@@ -71,6 +75,13 @@ class UtilityFetchingActivity : AppCompatActivity() {
         //Setting onclick on recyclerView each item
         adapter.setOnItemClickListener(object: UtilityAdapter.onItemClickListener {
             override fun onItemClick(position: Int) {
+                intent = Intent(applicationContext, UtilityDetailsActivity::class.java).also {
+                    it.putExtra("utilityName",hList[position].utilityName)
+                    it.putExtra("utilityAmount", hList[position].utilityAmount)
+                    it.putExtra("utilityDate", hList[position].utilityDate)
+                    it.putExtra("utilityId", hList[position].utilityId)
+                    startActivity(it)
+                }
             }
 
         })

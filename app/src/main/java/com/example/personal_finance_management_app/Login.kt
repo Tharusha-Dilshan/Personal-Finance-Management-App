@@ -65,10 +65,10 @@ class Login : AppCompatActivity() {
             intent = Intent(applicationContext, CreateAccount::class.java)
             startActivity(intent)
         }
-        binding.tvInstruction.setOnClickListener{
-            intent = Intent(applicationContext, CreateAccount::class.java)
-            startActivity(intent)
-        }
+//        binding.tvInstruction.setOnClickListener{
+//            intent = Intent(applicationContext, CreateAccount::class.java)
+//            startActivity(intent)
+//        }
 
     }
     override fun onStart() {

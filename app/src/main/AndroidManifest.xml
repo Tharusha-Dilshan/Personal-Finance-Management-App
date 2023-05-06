@@ -14,12 +14,14 @@
         android:theme="@style/Theme.PersonalFinanceManagementApp"
         tools:targetApi="31">
         <activity
-<<<<<<< HEAD
+            android:name=".UtilityUpdateDetailsActivity"
+            android:exported="true" />
+        <activity
             android:name=".UtilityDetailsActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".TelecommunicationDetailsActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".HealthInsertionActivity"
             android:exported="true" />
@@ -39,11 +41,9 @@
             android:name=".UtilityFetchingActivity"
             android:exported="true" />
         <activity
-=======
             android:name=".ViewAsset"
             android:exported="false" />
         <activity
->>>>>>> a5cb696941042c56555298366130dc2b8d643205
             android:name=".Calculators"
             android:exported="true" />
         <activity
@@ -57,9 +57,7 @@
             android:exported="true" />
         <activity
             android:name=".Portfolio"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".CurrencyConvertor"
             android:exported="true" />
@@ -92,7 +90,7 @@
             android:exported="true" />
         <activity
             android:name=".ExpensesActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>
