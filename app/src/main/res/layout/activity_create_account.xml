@@ -3,54 +3,33 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/singin_design"
     tools:context=".CreateAccount">
 
-    <ImageView
-        android:id="@+id/RegistrationimageView5"
-        android:layout_width="342dp"
-        android:layout_height="160dp"
-        android:layout_marginStart="24dp"
-        android:contentDescription="TODO"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/top_background_gradient"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="0dp" />
-
-    <ImageView
-        android:id="@+id/RegistrationimageView7"
-        android:layout_width="358dp"
-        android:layout_height="156dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.452"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/app_logo" />
 
     <TextView
         android:id="@+id/RegistrationtextView6"
-        android:layout_width="306dp"
-        android:layout_height="63dp"
+        android:layout_width="282dp"
+        android:layout_height="66dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="260dp"
         android:layout_marginEnd="118dp"
         android:text="Create Account"
-        android:textColor="@android:color/system_accent1_700"
+        android:textColor="@color/darkBlue"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.615"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/RegistrationimageView5"
-        tools:targetApi="s" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/etEmail"
         android:layout_width="303dp"
         android:layout_height="54dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="68dp"
         android:layout_marginEnd="66dp"
         android:drawableStart="@drawable/email_icon"
         android:drawablePadding="16dp"
@@ -102,7 +81,7 @@
         android:layout_width="303dp"
         android:layout_height="52dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="66dp"
         android:drawableStart="@drawable/person_icon"
         android:drawablePadding="16dp"
@@ -119,14 +98,17 @@
     <Button
         android:id="@+id/SingUpButton"
         android:layout_width="163dp"
-        android:layout_height="48dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="6dp"
         android:background="@drawable/btn_background"
         android:text="SING UP"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.439"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etConPass"
-        app:layout_constraintVertical_bias="0.272" />
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
