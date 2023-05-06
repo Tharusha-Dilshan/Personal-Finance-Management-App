@@ -26,6 +26,10 @@ class DashHome : AppCompatActivity() {
             intent = Intent(applicationContext, ExpensesActivity::class.java)
             startActivity(intent)
         }
+        binding.portimg.setOnClickListener {
+            intent = Intent(applicationContext, Portfolio::class.java)
+            startActivity(intent)
+        }
 
         binding.logoutbtn.setOnClickListener{
             // Clear any saved user session data or preferences
