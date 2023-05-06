@@ -3,6 +3,7 @@ package com.example.personal_finance_management_app
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.personal_finance_management_app.Adapters.PortfolioAdapter
@@ -44,6 +45,11 @@ class Portfolio : AppCompatActivity() {
         adapter = PortfolioAdapter(mList)
         recyclerView.adapter = adapter
 
+
+
+
+
+
         databaseRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 mList.clear()
@@ -65,6 +71,18 @@ class Portfolio : AppCompatActivity() {
         //Setting onclick on recyclerView each item
         adapter.setOnItemClickListner(object: PortfolioAdapter.onItemClickListner {
             override fun onItemClick(position: Int) {
+                intent = Intent(applicationContext, ViewAsset::class.java).also {
+                    it.putExtra("type", mList[position].assetType)
+                    it.putExtra("accnum", mList[position].accNumber)
+                    it.putExtra("amount", mList[position].amount)
+                    it.putExtra("bname", mList[position].bankName)
+                    it.putExtra("duration", mList[position].duration)
+                    it.putExtra("intrest", mList[position].intrestRate)
+                    it.putExtra("reqId", mList[position].recId)
+
+
+                    startActivity(it)
+                }
                }
 
         })
