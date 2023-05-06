@@ -79,6 +79,8 @@ class Portfolio : AppCompatActivity() {
                     it.putExtra("bname", mList[position].bankName)
                     it.putExtra("duration", mList[position].duration)
                     it.putExtra("intrest", mList[position].intrestRate)
+                    it.putExtra("reqId", mList[position].recId)
+
 
                     startActivity(it)
                 }

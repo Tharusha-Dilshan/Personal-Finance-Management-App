@@ -63,7 +63,7 @@ class PortAddAsset : AppCompatActivity() {
                 //Id for new record
                 var id = databaseRef.push().key!!
                 //create a Asset object
-                val asset = Asset( accNo,bank,type,intrest,duration,amount,)
+                val asset = Asset( accNo,bank,type,intrest,duration,amount,id)
                 databaseRef.child(id).setValue(asset).addOnCompleteListener {
                     if (it.isSuccessful){
                         intent = Intent(applicationContext, Portfolio::class.java)
