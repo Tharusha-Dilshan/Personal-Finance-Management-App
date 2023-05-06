@@ -14,6 +14,9 @@
         android:theme="@style/Theme.PersonalFinanceManagementApp"
         tools:targetApi="31">
         <activity
+            android:name=".UtilityDetailsActivity"
+            android:exported="false" />
+        <activity
             android:name=".TelecommunicationDetailsActivity"
             android:exported="false" />
         <activity
@@ -48,7 +51,7 @@
             android:exported="true" />
         <activity
             android:name=".Portfolio"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".CurrencyConvertor"
             android:exported="true" />
@@ -81,8 +84,7 @@
             android:exported="true" />
         <activity
             android:name=".ExpensesActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>
