@@ -46,6 +46,7 @@ class UtilityFetchingActivity : AppCompatActivity() {
 //        Toast.makeText(this, uid, Toast.LENGTH_SHORT).show()
 
         var recyclerView = binding.recyclerView
+        //var totalAmountTextView =  binding.totalFeeTxt
 
         recyclerView.setHasFixedSize(true)
         recyclerView.layoutManager = LinearLayoutManager(this);
@@ -64,6 +65,7 @@ class UtilityFetchingActivity : AppCompatActivity() {
                     }
                 }
                 adapter.notifyDataSetChanged()
+                updateTotalAmount()
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -86,6 +88,19 @@ class UtilityFetchingActivity : AppCompatActivity() {
 
         })
 
+    }
+
+    private fun updateTotalAmount() {
+        var totalAmount = 0.0
+
+        for (expense in hList) {
+            val amount = expense.utilityAmount!!.toDouble()
+            if (amount != null) {
+                totalAmount += amount
+            }
+        }
+
+        binding.totalFeeTxt.text = String.format("%.2f", totalAmount)
     }
     private fun addDataToList(){
         hList.add(UtilityModel("Water Bill","2000","2023/04/30"))
