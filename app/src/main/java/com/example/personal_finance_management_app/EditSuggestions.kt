@@ -4,25 +4,23 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.personal_finance_management_app.databinding.ActivityLoginBinding
-import com.example.personal_finance_management_app.databinding.ActivitySuggestionDetailsBinding
-import com.example.personal_finance_management_app.databinding.ActivityViewAssetBinding
+import com.example.personal_finance_management_app.databinding.ActivityEditSuggestionsBinding
+import com.example.personal_finance_management_app.databinding.ActivityPortEditAssetBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
-class SuggestionDetails : AppCompatActivity() {
-    private lateinit var binding: ActivitySuggestionDetailsBinding
+class EditSuggestions : AppCompatActivity() {
+
+    private lateinit var binding:ActivityEditSuggestionsBinding
     private lateinit var auth: FirebaseAuth
-    private lateinit var database: FirebaseDatabase
     private lateinit var databaseRef: DatabaseReference
     private lateinit var uid: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivitySuggestionDetailsBinding.inflate(layoutInflater)
+        binding = ActivityEditSuggestionsBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
 
         //initialize variables
         auth = FirebaseAuth.getInstance()
@@ -30,42 +28,44 @@ class SuggestionDetails : AppCompatActivity() {
         databaseRef = FirebaseDatabase.getInstance().reference
             .child("FinanceSuggestions").child(uid)
 
+
         val sugId = intent.getStringExtra("sugId")
         val bankName = intent.getStringExtra("bankName")
         val finType = intent.getStringExtra("finType")
         val suggestion = intent.getStringExtra("suggetion")
 
-
         //bind values to editTexts
+        binding.etBankName.setText(bankName)
+        binding.etFinType.setText(finType)
+        binding.etSuggestion.setText(suggestion)
 
-        binding.tvBankName.text = bankName
-        binding.tvFinType.text = finType
-        binding.tvSuggestion.text = suggestion
-
-
-        binding.btnUpdate.setOnClickListener{
-            intent = Intent(applicationContext, EditSuggestions::class.java).also {
-                it.putExtra("sugId", sugId)
-                it.putExtra("bankName", bankName)
-                it.putExtra("finType", finType)
-                it.putExtra("suggetion",suggestion)
+        binding.btnUpdateData.setOnClickListener {
+            var bankName=binding.etBankName.text.toString()
+            var finType=binding.etFinType.text.toString()
+            var suggestion=binding.etSuggestion.text.toString()
 
 
+            val map = HashMap<String,Any>()
 
-                startActivity(it)
-            }
-        }
+            //add data to hashMap
+            map["bankName"] = bankName
+            map["finType"] = finType
+            map["suggetion"] = suggestion
 
-        binding.btnDelete.setOnClickListener{
-            databaseRef.child(sugId!!).removeValue().addOnCompleteListener {
+
+
+            //update database from hashMap
+            databaseRef.child(sugId!!).updateChildren(map).addOnCompleteListener {
                 if( it.isSuccessful){
-                    Toast.makeText(this, "Suggestion Deleted", Toast.LENGTH_SHORT).show()
                     intent = Intent(applicationContext, FetchingSuggestions::class.java)
                     startActivity(intent)
+                    Toast.makeText(this, "Suggestion Updated successfully", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(this, it.exception?.message, Toast.LENGTH_SHORT).show()
                 }
             }
-        }
 
+        }
 
     }
 }
