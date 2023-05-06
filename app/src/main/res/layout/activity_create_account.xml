@@ -121,7 +121,7 @@
         android:layout_width="163dp"
         android:layout_height="48dp"
         android:background="@drawable/btn_background"
-        android:text="SING UP"
+        android:text="SING IN"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
