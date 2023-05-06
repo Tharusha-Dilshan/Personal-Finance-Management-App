@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.personal_finance_management_app.Adapters.PortfolioAdapter
 import com.example.personal_finance_management_app.DataClasses.Asset
 import com.example.personal_finance_management_app.databinding.ActivityPortfolioBinding
-import com.google.android.material.internal.ContextUtils.getActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 

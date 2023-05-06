@@ -19,11 +19,11 @@
     <color name="green">#4efc03</color>
 
     <color name="redN">#AA1B11</color>
+    <color name="lightGray_bg">#f5f5f5</color>
 
 <!--Nisal -->
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="amount_background">#ffe0b2</color>
-
 </resources>
