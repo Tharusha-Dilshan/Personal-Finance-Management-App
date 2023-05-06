@@ -23,7 +23,7 @@ class SugAdapter(private val sugList: ArrayList<SuggestionModel>) :
     }
     inner class ViewHolder(itemView: View, listener: onItemClickListener) : RecyclerView.ViewHolder(itemView) {
 
-        //val tvSuggestion : TextView = itemView.findViewById(R.id.tvSuggestion)
+        val tvSuggestion : TextView = itemView.findViewById(R.id.tvSuggestion)
         val tvBankName : TextView = itemView.findViewById(R.id.tvBankName)
         val tvFinType : TextView = itemView.findViewById(R.id.tvFinType)
 
@@ -44,7 +44,7 @@ class SugAdapter(private val sugList: ArrayList<SuggestionModel>) :
     }
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-        //holder.tvSuggestion.text = sugList[position].suggetion
+        holder.tvSuggestion.text = sugList[position].suggetion
         holder.tvBankName.text = sugList[position].bankName
         holder.tvFinType.text = sugList[position].finType
     }
