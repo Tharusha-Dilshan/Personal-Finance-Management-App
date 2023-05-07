@@ -14,6 +14,15 @@
         android:theme="@style/Theme.PersonalFinanceManagementApp"
         tools:targetApi="31">
         <activity
+            android:name=".SetGoals"
+            android:exported="false" />
+        <activity
+            android:name=".NewCatogory"
+            android:exported="false" />
+        <activity
+            android:name=".EditGoal"
+            android:exported="false" />
+        <activity
             android:name=".UtilityUpdateDetailsActivity"
             android:exported="true" />
         <activity
@@ -66,7 +75,7 @@
             android:exported="true" />
         <activity
             android:name=".Portfolio"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".CurrencyConvertor"
             android:exported="true" />

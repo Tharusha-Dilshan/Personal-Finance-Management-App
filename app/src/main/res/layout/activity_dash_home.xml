@@ -275,7 +275,7 @@
                         android:orientation="vertical">
 
                         <ImageView
-                            android:id="@+id/imageView15"
+                            android:id="@+id/goalsBtn"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:layout_marginStart="50dp"
