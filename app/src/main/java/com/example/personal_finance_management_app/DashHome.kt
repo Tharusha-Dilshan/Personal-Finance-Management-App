@@ -30,6 +30,10 @@ class DashHome : AppCompatActivity() {
             intent = Intent(applicationContext, Portfolio::class.java)
             startActivity(intent)
         }
+        binding.goalsBtn.setOnClickListener {
+            intent = Intent(applicationContext, SetGoals::class.java)
+            startActivity(intent)
+        }
 
         binding.logoutbtn.setOnClickListener{
             // Clear any saved user session data or preferences
