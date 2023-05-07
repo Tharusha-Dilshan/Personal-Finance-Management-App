@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="@drawable/singin_design"
     tools:context=".CreateAccount">
 
@@ -13,14 +13,14 @@
         android:layout_width="282dp"
         android:layout_height="66dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="260dp"
+        android:layout_marginTop="284dp"
         android:layout_marginEnd="118dp"
         android:text="Create Account"
         android:textColor="@color/darkBlue"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.615"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -63,7 +63,7 @@
         android:id="@+id/etPass"
         android:layout_width="303dp"
         android:layout_height="54dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:drawableStart="@drawable/password_icon"
         android:drawablePadding="16dp"
         android:ems="10"
@@ -102,13 +102,15 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="6dp"
         android:background="@drawable/btn_background"
-        android:text="SING UP"
+        android:text="SING IN"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.439"
+        app:layout_constraintHorizontal_bias="0.455"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etConPass"
-        app:layout_constraintVertical_bias="1.0" />
+
+        app:layout_constraintVertical_bias="0.408" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

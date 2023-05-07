@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/page_bg"
     tools:context=".PortAddAsset">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -51,22 +52,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:entries="@array/typeAsset"
-                    />
+                    android:entries="@array/typeAsset" />
 
-<!--                <Spinner-->
-<!--                    android:id="@+id/spinner"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="48dp"-->
-<!--                    -->
-<!--                    android:backgroundTint="@color/darkBlue"-->
-<!--                    android:backgroundTintMode="add"-->
-<!--                    android:entries="@array/typeAsset"-->
-<!--                    android:foregroundTintMode="add"-->
+                <!--                <Spinner-->
+                <!--                    android:id="@+id/spinner"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="48dp"-->
+                <!--                    -->
+                <!--                    android:backgroundTint="@color/darkBlue"-->
+                <!--                    android:backgroundTintMode="add"-->
+                <!--                    android:entries="@array/typeAsset"-->
+                <!--                    android:foregroundTintMode="add"-->
 
-<!--                    android:prompt="@string/Assets"-->
-<!--                    android:scrollbarSize="18dp"-->
-<!--                    android:theme="@style/mySpinnerItemStyle" />-->
+                <!--                    android:prompt="@string/Assets"-->
+                <!--                    android:scrollbarSize="18dp"-->
+                <!--                    android:theme="@style/mySpinnerItemStyle" />-->
                 <!--                    android:popupBackground="@drawable/custom_background"-->
 
             </LinearLayout>
@@ -76,12 +76,12 @@
                 android:layout_width="0dp"
                 android:layout_height="48dp"
                 android:layout_marginTop="24dp"
-                android:textColor="@color/white"
                 android:layout_weight="1"
                 android:backgroundTint="@color/lightGreen"
                 android:ems="10"
                 android:hint="@string/AccNum"
                 android:inputType="number"
+                android:textColor="@color/white"
                 android:textColorHint="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -95,11 +95,11 @@
                 android:layout_width="0dp"
                 android:layout_height="48dp"
                 android:layout_marginTop="16dp"
-                android:textColor="@color/white"
                 android:backgroundTint="@color/lightGreen"
                 android:ems="10"
                 android:hint="@string/Amount"
                 android:inputType="number"
+                android:textColor="@color/white"
                 android:textColorHint="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
@@ -111,12 +111,12 @@
                 android:layout_width="0dp"
                 android:layout_height="48dp"
                 android:layout_marginTop="16dp"
-                android:textColor="@color/white"
                 android:layout_weight="1"
                 android:backgroundTint="@color/lightGreen"
                 android:ems="10"
                 android:hint="@string/Duration"
                 android:inputType="number"
+                android:textColor="@color/white"
                 android:textColorHint="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -130,12 +130,12 @@
                 android:layout_width="0dp"
                 android:layout_height="48dp"
                 android:layout_marginTop="16dp"
-                android:textColor="@color/white"
                 android:layout_weight="1"
                 android:backgroundTint="@color/lightGreen"
                 android:ems="10"
                 android:hint="@string/Inter"
                 android:inputType="number"
+                android:textColor="@color/white"
                 android:textColorHint="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -148,13 +148,13 @@
                 android:id="@+id/addBank"
                 android:layout_width="0dp"
                 android:layout_height="48dp"
-                android:textColor="@color/white"
                 android:layout_marginTop="16dp"
                 android:layout_weight="1"
                 android:backgroundTint="@color/lightGreen"
                 android:ems="10"
                 android:hint="@string/Bank"
                 android:inputType="textPersonName"
+                android:textColor="@color/white"
                 android:textColorHint="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -169,8 +169,8 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/Teal"
                 android:drawableRight="@drawable/plus_math"
-
                 android:text="@string/Add"
+                android:textColor="@color/white"
                 app:iconTint="@color/lightGreen"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
