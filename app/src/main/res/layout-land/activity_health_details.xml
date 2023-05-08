@@ -16,8 +16,8 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginStart="30dp"
-        android:layout_gravity="center_horizontal"
         app:cardCornerRadius="30dp"
+        android:layout_gravity="center_horizontal"
         app:cardElevation="20dp">
 
 
@@ -38,7 +38,7 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:layout_marginTop="20dp"
-                android:text="Utility Bill Details"
+                android:text="Health Bill Details"
                 android:textColor="@color/darkBlue"
                 android:textStyle="bold"
                 android:textSize="20sp" />
@@ -82,7 +82,7 @@
                     android:layout_weight="1.4">
 
                     <TextView
-                        android:id="@+id/UtilitybillName"
+                        android:id="@+id/HealthbillName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -135,7 +135,7 @@
                     android:layout_weight="1.4">
 
                     <TextView
-                        android:id="@+id/UtilitybillAmount"
+                        android:id="@+id/HealthbillAmount"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -188,7 +188,7 @@
                     android:layout_weight="1.4">
 
                     <TextView
-                        android:id="@+id/UtilitybillDate"
+                        android:id="@+id/HealthbillDate"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
