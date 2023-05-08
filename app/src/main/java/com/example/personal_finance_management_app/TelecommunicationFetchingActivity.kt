@@ -58,13 +58,13 @@ class TelecommunicationFetchingActivity : AppCompatActivity() {
             override fun onDataChange(snapshot: DataSnapshot) {
                 hList.clear()
 
-                var totalAmount = 0.0 // Initialize the totalAmount variable to zero
+               // var totalAmount = 0.0 // Initialize the totalAmount variable to zero
 
                 for ( frSnapshot in snapshot.children){
                     val fr = frSnapshot.getValue(TelecommunicationModel::class.java)!!
                     if( fr != null){
                         hList.add(fr)
-                        totalAmount += fr.telAmount!!.toDouble() // Add the amount of each health bill to the totalAmount variable
+                        //totalAmount += fr.telAmount!!.toDouble() // Add the amount of each health bill to the totalAmount variable
                     }
                 }
                 adapter.notifyDataSetChanged()
