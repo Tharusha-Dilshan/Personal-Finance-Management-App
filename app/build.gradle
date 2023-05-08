@@ -48,6 +48,12 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     implementation 'com.squareup.okhttp3:okhttp:4.9.2'
+<<<<<<< HEAD
     implementation 'androidx.cardview:cardview:1.0.0'
+=======
+    //adding pie chart dependencies
+    implementation 'com.github.blackfizz:eazegraph:1.2.5l@aar'
+    implementation 'com.nineoldandroids:library:2.4.0'
+>>>>>>> a43b5395f3acf5fb960af8e6038bfdf88d11d679
 
 }

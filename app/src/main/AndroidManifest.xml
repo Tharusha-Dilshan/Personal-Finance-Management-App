@@ -17,6 +17,15 @@
             android:name=".HomePage"
             android:exported="true" />
         <activity
+            android:name=".SetGoals"
+            android:exported="false" />
+        <activity
+            android:name=".NewCatogory"
+            android:exported="false" />
+        <activity
+            android:name=".EditGoal"
+            android:exported="false" />
+        <activity
             android:name=".UtilityUpdateDetailsActivity"
             android:exported="true" />
         <activity
