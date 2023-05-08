@@ -11,8 +11,6 @@ import com.example.personal_finance_management_app.Adapters.UtilityAdapter
 import com.example.personal_finance_management_app.DataClasses.Asset
 import com.example.personal_finance_management_app.DataClasses.HealthModel
 import com.example.personal_finance_management_app.DataClasses.UtilityModel
-import com.example.personal_finance_management_app.databinding.ActivityHealthFetchingBinding
-import com.example.personal_finance_management_app.databinding.ActivityPortfolioBinding
 import com.example.personal_finance_management_app.databinding.ActivityUtilityFetchingBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
