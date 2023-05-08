@@ -4,41 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FinanceSuggestionsSubmit"
-   >
+    android:background="@drawable/page_bg"
+    tools:context=".FinanceSuggestionsSubmit">
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="410dp"
-        android:layout_height="758dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:background="@color/white"
+        android:background="@drawable/page_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        >
+        app:layout_constraintVertical_bias="1.0">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout"
-                android:layout_width="393dp"
-                android:layout_height="840dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:background="@drawable/page_bg">
+                android:layout_marginBottom="16dp">
 
 
                 <TextView
@@ -112,8 +109,8 @@
 
                 <ImageView
                     android:id="@+id/sug_main_img"
-                    android:layout_width="153dp"
-                    android:layout_height="99dp"
+                    android:layout_width="156dp"
+                    android:layout_height="109dp"
                     android:layout_marginTop="28dp"
                     android:outlineProvider="none"
 
@@ -158,6 +155,7 @@
                     android:backgroundTint="@color/teal_700"
                     android:drawableRight="@drawable/plus_math"
                     android:text="ADD"
+                    android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="@+id/rectangle3"
                     app:layout_constraintEnd_toStartOf="@+id/sug_cancel_btn"
                     app:layout_constraintStart_toStartOf="@+id/rectangle3"
@@ -172,6 +170,7 @@
                     android:backgroundTint="@android:color/holo_red_light"
                     android:drawableRight="@drawable/cross_mark"
                     android:text="Cancel"
+                    android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="@+id/rectangle3"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/sug_input_field"
@@ -181,14 +180,17 @@
                     android:id="@+id/sug_edit_btn"
                     android:layout_width="222dp"
                     android:layout_height="70dp"
-                    android:layout_marginEnd="152dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
                     android:backgroundTint="@color/garyBlue"
                     android:drawableLeft="@drawable/editicon"
                     android:text="Edit Suggetions"
+                    android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/rectangle3"
-                    app:layout_constraintVertical_bias="0.545"
+                    app:layout_constraintVertical_bias="0.0"
                     tools:text="@string/editSuggestion" />
 
                 <com.google.android.material.textfield.TextInputEditText
