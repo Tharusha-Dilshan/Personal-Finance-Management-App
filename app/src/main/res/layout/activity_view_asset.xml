@@ -9,6 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/page_bg"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -213,11 +214,12 @@
                     android:layout_marginStart="10sp"
                     android:layout_weight="1"
                     android:backgroundTint="@color/Teal"
-                    android:backgroundTintMode="add"
-                    android:drawableLeft="@drawable/edit"
-                    android:paddingStart="20sp"
+                    android:drawableLeft="@drawable/delete"
+                    android:paddingStart="10sp"
                     android:paddingEnd="10sp"
-                    android:text="Edit" />
+                    android:text="Edit"
+                    android:textAlignment="center"
+                    android:textColor="@color/white" />
 
                 <Button
                     android:id="@+id/deleteBtn"
@@ -230,7 +232,8 @@
                     android:paddingStart="10sp"
                     android:paddingEnd="10sp"
                     android:text="Delete"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textColor="@color/white" />
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
