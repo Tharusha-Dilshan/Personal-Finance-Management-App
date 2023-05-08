@@ -16,7 +16,7 @@ class FinanceActivity : AppCompatActivity() {
 
 
         binding.sugimg.setOnClickListener{
-            intent = Intent(applicationContext, SubmitSuggestions::class.java)
+            intent = Intent(applicationContext, FinanceSuggestionsSubmit::class.java)
             startActivity(intent)
         }
         binding.rateimg.setOnClickListener{
@@ -26,20 +26,20 @@ class FinanceActivity : AppCompatActivity() {
             startActivity(intent)
         }
         binding.loancalimg.setOnClickListener{
-            intent = Intent(applicationContext, LoanCalculator::class.java)
+            intent = Intent(applicationContext, FinanceCalculatorLoan::class.java)
             startActivity(intent)
         }
 
         binding.excalimg.setOnClickListener{
-            intent = Intent(applicationContext, CurrencyConvertor::class.java)
+            intent = Intent(applicationContext, FinanceCalculatorCurrencyConvertor::class.java)
             startActivity(intent)
         }
         binding.fdcalimg.setOnClickListener{
-            intent = Intent(applicationContext, LoanCalculator::class.java)
+            intent = Intent(applicationContext, FinanceCalculatorLoan::class.java)
             startActivity(intent)
         }
         binding.prefimg.setOnClickListener{
-            intent = Intent(applicationContext, PreferencesActivity::class.java)
+            intent = Intent(applicationContext, FinancePreferencesFetchingActivity::class.java)
             startActivity(intent)
         }
 

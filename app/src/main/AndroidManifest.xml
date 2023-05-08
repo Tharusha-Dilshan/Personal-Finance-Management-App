@@ -14,16 +14,19 @@
         android:theme="@style/Theme.PersonalFinanceManagementApp"
         tools:targetApi="31">
         <activity
+            android:name=".HomePage"
+            android:exported="true" />
+        <activity
             android:name=".UtilityUpdateDetailsActivity"
             android:exported="true" />
         <activity
-            android:name=".EditSuggestions"
+            android:name=".FinanceSuggestionEdit"
             android:exported="true" />
         <activity
-            android:name=".SuggestionDetails"
+            android:name=".FinanceSuggestionDetails"
             android:exported="true" />
         <activity
-            android:name=".PreferencesActivity"
+            android:name=".FinancePreferencesFetchingActivity"
             android:exported="true" />
         <activity
             android:name=".UtilityDetailsActivity"
@@ -53,25 +56,25 @@
             android:name=".ViewAsset"
             android:exported="false" />
         <activity
-            android:name=".Calculators"
+            android:name=".FinanceCalculators"
             android:exported="true" />
         <activity
-            android:name=".FetchingSuggestions"
+            android:name=".FinanceSuggestionFetching"
             android:exported="true" />
         <activity
-            android:name=".SubmitSuggestions"
+            android:name=".FinanceSuggestionsSubmit"
             android:exported="true" />
         <activity
             android:name=".FinanceActivity"
             android:exported="true" />
         <activity
             android:name=".Portfolio"
-            android:exported="true"></activity>
-        <activity
-            android:name=".CurrencyConvertor"
             android:exported="true" />
         <activity
-            android:name=".LoanCalculator"
+            android:name=".FinanceCalculatorCurrencyConvertor"
+            android:exported="true" />
+        <activity
+            android:name=".FinanceCalculatorLoan"
             android:exported="true" />
         <activity
             android:name=".PortEditAsset"

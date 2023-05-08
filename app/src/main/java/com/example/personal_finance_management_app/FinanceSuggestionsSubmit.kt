@@ -1,19 +1,17 @@
 package com.example.personal_finance_management_app
 
-import android.app.Dialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.personal_finance_management_app.DataClasses.Asset
 import com.example.personal_finance_management_app.DataClasses.SuggestionModel
-import com.example.personal_finance_management_app.databinding.ActivitySubmitSuggestionsBinding
+import com.example.personal_finance_management_app.databinding.ActivityFinanceSuggestionsSubmitBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
-class SubmitSuggestions : AppCompatActivity() {
-    private lateinit var binding: ActivitySubmitSuggestionsBinding
+class FinanceSuggestionsSubmit : AppCompatActivity() {
+    private lateinit var binding: ActivityFinanceSuggestionsSubmitBinding
     private lateinit var auth: FirebaseAuth
     private lateinit var databaseRef: DatabaseReference
     private lateinit var databaseRef2: DatabaseReference
@@ -21,7 +19,7 @@ class SubmitSuggestions : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivitySubmitSuggestionsBinding.inflate(layoutInflater)
+        binding = ActivityFinanceSuggestionsSubmitBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         //initialize variables
@@ -74,7 +72,7 @@ class SubmitSuggestions : AppCompatActivity() {
             binding.sugInputField.text?.clear()
         }
         binding.sugEditBtn.setOnClickListener{
-            intent = Intent(applicationContext, FetchingSuggestions::class.java)
+            intent = Intent(applicationContext, FinanceSuggestionFetching::class.java)
             startActivity(intent)
         }
     }

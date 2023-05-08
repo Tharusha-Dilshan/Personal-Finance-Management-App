@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoanCalculator"
+    tools:context=".FinanceCalculatorLoan"
     android:background="@drawable/page_bg">
 
     <LinearLayout
@@ -77,27 +77,30 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="86dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/calculateButton"
-                android:layout_width="190dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
+                android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="16dp"
                 android:backgroundTint="@color/Teal"
                 android:drawableRight="@drawable/calculator"
                 android:foregroundTintMode="add"
-                android:text="Calculate" />
+                android:text="Calculate"
+                android:textSize="12sp" />
 
 
             <Button
                 android:id="@+id/loanCancelBtn"
-                android:layout_width="190dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
+                android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="16dp"
@@ -105,7 +108,8 @@
                 android:drawableRight="@drawable/cross_mark"
                 android:drawableTint="@color/colorAccent"
                 android:drawableTintMode="add"
-                android:text="Clear" />
+                android:text="Clear"
+                android:textSize="12sp" />
 
         </LinearLayout>
 
