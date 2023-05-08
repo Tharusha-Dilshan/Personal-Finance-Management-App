@@ -4,15 +4,13 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.personal_finance_management_app.databinding.ActivityLoginBinding
-import com.example.personal_finance_management_app.databinding.ActivitySuggestionDetailsBinding
-import com.example.personal_finance_management_app.databinding.ActivityViewAssetBinding
+import com.example.personal_finance_management_app.databinding.ActivityFinanceSuggestionDetailsBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
-class SuggestionDetails : AppCompatActivity() {
-    private lateinit var binding: ActivitySuggestionDetailsBinding
+class FinanceSuggestionDetails : AppCompatActivity() {
+    private lateinit var binding: ActivityFinanceSuggestionDetailsBinding
     private lateinit var auth: FirebaseAuth
     private lateinit var database: FirebaseDatabase
     private lateinit var databaseRef: DatabaseReference
@@ -20,7 +18,7 @@ class SuggestionDetails : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivitySuggestionDetailsBinding.inflate(layoutInflater)
+        binding = ActivityFinanceSuggestionDetailsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
 
@@ -44,7 +42,7 @@ class SuggestionDetails : AppCompatActivity() {
 
 
         binding.btnUpdate.setOnClickListener{
-            intent = Intent(applicationContext, EditSuggestions::class.java).also {
+            intent = Intent(applicationContext, FinanceSuggestionEdit::class.java).also {
                 it.putExtra("sugId", sugId)
                 it.putExtra("bankName", bankName)
                 it.putExtra("finType", finType)
@@ -60,7 +58,7 @@ class SuggestionDetails : AppCompatActivity() {
             databaseRef.child(sugId!!).removeValue().addOnCompleteListener {
                 if( it.isSuccessful){
                     Toast.makeText(this, "Suggestion Deleted", Toast.LENGTH_SHORT).show()
-                    intent = Intent(applicationContext, FetchingSuggestions::class.java)
+                    intent = Intent(applicationContext, FinanceSuggestionFetching::class.java)
                     startActivity(intent)
                 }
             }

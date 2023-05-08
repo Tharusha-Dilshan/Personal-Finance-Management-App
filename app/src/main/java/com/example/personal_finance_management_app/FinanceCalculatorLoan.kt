@@ -7,7 +7,7 @@ import android.widget.EditText
 import android.widget.TextView
 
 
-class LoanCalculator : AppCompatActivity() {
+class FinanceCalculatorLoan : AppCompatActivity() {
 
     private lateinit var loanAmountEditText: EditText
     private lateinit var interestRateEditText: EditText
@@ -20,7 +20,7 @@ class LoanCalculator : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_loan_calculator)
+        setContentView(R.layout.activity_finance_calculator_loan)
 
         loanAmountEditText = findViewById(R.id.loanAmountEditText)
         interestRateEditText = findViewById(R.id.interestRateEditText)

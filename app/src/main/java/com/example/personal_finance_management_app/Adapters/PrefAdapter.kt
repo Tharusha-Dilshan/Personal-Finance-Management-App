@@ -36,7 +36,7 @@ class PrefAdapter(private val sugList: ArrayList<SuggestionModel>) :
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.preferencess_list, parent, false)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.activity__finance_preferencess_list, parent, false)
         return ViewHolder(itemView, mListener)
     }
     override fun getItemCount(): Int {
