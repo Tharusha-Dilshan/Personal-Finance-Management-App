@@ -41,42 +41,45 @@
                 android:textColor="@color/darkBlue"
                 android:textStyle="bold"
                 android:textSize="20sp" />
-    
-    
+
+
             <LinearLayout
                 android:id="@+id/id_lin"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="10dp"
-                android:orientation="horizontal"
-                android:weightSum="2"
-    
-                >
-    
+                android:layout_height="40dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/cardview_boarder"
+                android:weightSum="2">
+
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="30dp"
                     android:layout_weight="0.6"
-                    android:background="@color/lightGray_bg">
-    
+                    android:background="@color/white">
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
+                        android:layout_gravity="left"
                         android:gravity="center"
+                        android:paddingLeft="2dp"
+                        android:paddingTop="2dp"
+                        android:paddingRight="2dp"
+                        android:paddingBottom="2dp"
                         android:text="Bill Name"
                         android:textColor="@color/black"
                         android:textSize="15sp" />
-    
+
                 </LinearLayout>
-    
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1.4">
-    
+
                     <TextView
                         android:id="@+id/HealthbillName"
                         android:layout_width="match_parent"
@@ -86,44 +89,50 @@
                         android:text=""
                         android:textColor="@color/black"
                         android:textSize="15sp" />
-    
+
                 </LinearLayout>
-    
-    
+
+
             </LinearLayout>
-    
-    
+
+
             <LinearLayout
                 android:id="@+id/contact_lin"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:orientation="horizontal"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/cardview_boarder"
                 android:weightSum="2">
-    
+
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="30dp"
                     android:layout_weight="0.6"
-                    android:background="@color/lightGray_bg">
-    
+                    android:background="@color/white">
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
+                        android:layout_gravity="left"
                         android:gravity="center"
+                        android:paddingLeft="2dp"
+                        android:paddingTop="2dp"
+                        android:paddingRight="2dp"
+                        android:paddingBottom="2dp"
                         android:text="Bill Amount"
                         android:textColor="@color/black"
                         android:textSize="15sp" />
-    
+
                 </LinearLayout>
-    
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1.4">
-    
+
                     <TextView
                         android:id="@+id/HealthbillAmount"
                         android:layout_width="match_parent"
@@ -133,50 +142,50 @@
                         android:text=""
                         android:textColor="@color/black"
                         android:textSize="15sp"
-    
+
                         />
-    
+
                 </LinearLayout>
-    
-    
+
+
             </LinearLayout>
-    
+
             <LinearLayout
-    
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:orientation="horizontal"
-                android:weightSum="2"
-    
-                >
-    
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/cardview_boarder"
+                android:weightSum="2">
+
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="30dp"
                     android:layout_weight="0.6"
-                    android:background="@color/lightGray_bg">
-    
+                    android:background="@color/white">
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
+                        android:layout_gravity="left"
                         android:gravity="center"
+                        android:paddingLeft="2dp"
+                        android:paddingTop="2dp"
+                        android:paddingRight="2dp"
+                        android:paddingBottom="2dp"
                         android:text="Billing Date"
                         android:textColor="@color/black"
-                        android:textSize="15sp"
-    
-    
-                        />
-    
+                        android:textSize="15sp" />
+
                 </LinearLayout>
-    
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1.4">
-    
+
                     <TextView
                         android:id="@+id/HealthbillDate"
                         android:layout_width="match_parent"
@@ -186,12 +195,12 @@
                         android:text=""
                         android:textColor="@color/black"
                         android:textSize="15sp"
-    
+
                         />
-    
+
                 </LinearLayout>
-    
-    
+
+
             </LinearLayout>
 
 
@@ -201,7 +210,7 @@
                 android:orientation="horizontal"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp">
-    
+
                 <Button
                     android:id="@+id/btnUpdate"
                     android:layout_width="wrap_content"
@@ -212,21 +221,21 @@
                     android:backgroundTint="@color/darkBlue"
                     android:textColor="@color/white"
                     android:text="Update" />
-    
+
                 <Button
                     android:id="@+id/btnDelete"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="30dp"
-                    android:layout_marginLeft="60dp"
+                    android:layout_marginLeft="50dp"
                     android:layout_marginBottom="20dp"
                     android:text="Delete"
                     android:backgroundTint="@color/redN"
                     android:textColor="@color/white"/>
             </LinearLayout>
-    
-    
+
+
         </LinearLayout>
-    
+
     </androidx.cardview.widget.CardView>
 </ScrollView>
