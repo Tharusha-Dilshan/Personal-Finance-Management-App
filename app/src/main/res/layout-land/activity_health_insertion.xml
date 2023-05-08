@@ -6,19 +6,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/page_bg"
-    tools:context=".UtilityUpdateDetailsActivity">
+    tools:context=".HealthInsertionActivity">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
+        android:layout_width="500dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:scrollbars="vertical"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="30dp"
         android:layout_marginStart="30dp"
+        android:layout_marginBottom="30dp"
         app:cardCornerRadius="30dp"
         app:cardElevation="20dp">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="500dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_gravity="center_horizontal"
@@ -29,42 +32,42 @@
                 android:id="@+id/topic"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Update Utility Bill Data"
+                android:text="Insert Health Bill Data"
                 android:textStyle="bold"
-                android:textSize="30sp"
+                android:textSize="20sp"
                 android:textAlignment="center"
                 android:textColor="@color/darkBlue"/>
 
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:id="@+id/utilityBillName"
+                android:layout_height="48dp"
+                android:id="@+id/healthBillName"
+                android:background="@drawable/cardview_boarder"
                 android:layout_marginTop="20dp"
-                android:padding="16dp"
+                android:padding="10dp"
                 android:hint="Enter Bill Name"
-                android:background="@drawable/cardview_boarder"
                 android:gravity="start|center_vertical"
                 android:textColor="@color/darkBlue"/>
 
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:id="@+id/utilityBillAmount"
+                android:layout_height="48dp"
+                android:id="@+id/healthBillAmount"
+                android:background="@drawable/cardview_boarder"
                 android:layout_marginTop="20dp"
-                android:padding="16dp"
+                android:padding="10dp"
                 android:hint="Enter Bill Amount"
-                android:background="@drawable/cardview_boarder"
                 android:gravity="start|center_vertical"
                 android:textColor="@color/darkBlue"/>
 
 
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:id="@+id/utilityBillDate"
+                android:layout_height="48dp"
+                android:id="@+id/healthBillDate"
                 android:background="@drawable/cardview_boarder"
                 android:layout_marginTop="20dp"
-                android:padding="16dp"
+                android:padding="10dp"
                 android:hint="Enter the Billing Date"
                 android:singleLine="true"
                 android:gravity="start|center_vertical"
@@ -72,8 +75,8 @@
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:id="@+id/utilitySaveButton"
+                android:layout_height="48dp"
+                android:id="@+id/healthSaveButton"
                 android:text="Save"
                 android:textSize="18dp"
                 android:textColor="@color/white"
@@ -84,6 +87,5 @@
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-
 
 </ScrollView>

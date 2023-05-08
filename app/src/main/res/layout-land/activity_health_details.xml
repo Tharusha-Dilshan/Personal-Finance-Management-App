@@ -11,12 +11,13 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
+        android:layout_width="500dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginStart="30dp"
         app:cardCornerRadius="30dp"
+        android:layout_gravity="center_horizontal"
         app:cardElevation="20dp">
 
 
@@ -211,27 +212,41 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp">
 
-                <Button
-                    android:id="@+id/btnUpdate"
-                    android:layout_width="wrap_content"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginLeft="50dp"
-                    android:layout_marginBottom="20dp"
-                    android:backgroundTint="@color/darkBlue"
-                    android:textColor="@color/white"
-                    android:text="Update" />
+                    android:layout_marginBottom="10dp">
 
-                <Button
-                    android:id="@+id/btnDelete"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginLeft="50dp"
-                    android:layout_marginBottom="20dp"
-                    android:text="Delete"
-                    android:backgroundTint="@color/redN"
-                    android:textColor="@color/white"/>
+                    <Button
+                        android:id="@+id/btnUpdate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="180dp"
+                        android:text="Update"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:backgroundTint="@color/darkBlue"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <Button
+                        android:id="@+id/btnDelete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/redN"
+                        android:text="Delete"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.311"
+                        app:layout_constraintStart_toEndOf="@+id/btnUpdate"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
             </LinearLayout>
 
 

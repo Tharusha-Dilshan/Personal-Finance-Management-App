@@ -55,16 +55,14 @@ class HealthFetchingActivity : AppCompatActivity() {
             override fun onDataChange(snapshot: DataSnapshot) {
                 hList.clear()
 
-                var totalAmount = 0.0 // Initialize the totalAmount variable to zero
-
                 for ( frSnapshot in snapshot.children){
                     val fr = frSnapshot.getValue(HealthModel::class.java)!!
                     if( fr != null){
                         hList.add(fr)
-                        totalAmount += fr.healthAmount!!.toDouble() // Add the amount of each health bill to the totalAmount variable
                     }
                 }
                 adapter.notifyDataSetChanged()
+                updateTotalAmount()
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -76,10 +74,30 @@ class HealthFetchingActivity : AppCompatActivity() {
         //Setting onclick on recyclerView each item
         adapter.setOnItemClickListener(object: HealthAdapter.onItemClickListener {
             override fun onItemClick(position: Int) {
+                intent = Intent(applicationContext, HealthDetailsActivity::class.java).also {
+                    it.putExtra("healthName", hList[position].healthName)
+                    it.putExtra("healthAmount", hList[position].healthAmount)
+                    it.putExtra("healthDate", hList[position].healthDate)
+                    it.putExtra("healthId", hList[position].healthId)
+                    startActivity(it)
+                }
             }
 
         })
 
+    }
+
+    private fun updateTotalAmount() {
+        var totalAmount = 0.0
+
+        for (expense in hList) {
+            val amount = expense.healthAmount!!.toDouble()
+            if (amount != null) {
+                totalAmount += amount
+            }
+        }
+
+        binding.totalFeeTxt.text = String.format("%.2f", totalAmount)
     }
     private fun addDataToList(){
         hList.add(HealthModel("Nawaloka Bill","200000","2023/04/23"))
