@@ -5,8 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/page_bg"
-    tools:context=".UtilityUpdateDetailsActivity">
+    android:background="@drawable/page_bg">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -29,7 +28,7 @@
                 android:id="@+id/topic"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Update Utility Bill Data"
+                android:text="Update Health Bill Data"
                 android:textStyle="bold"
                 android:textSize="30sp"
                 android:textAlignment="center"
@@ -38,7 +37,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:id="@+id/utilityBillName"
+                android:id="@+id/healthBillName"
                 android:layout_marginTop="20dp"
                 android:padding="16dp"
                 android:hint="Enter Bill Name"
@@ -49,7 +48,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:id="@+id/utilityBillAmount"
+                android:id="@+id/healthBillAmount"
                 android:layout_marginTop="20dp"
                 android:padding="16dp"
                 android:hint="Enter Bill Amount"
@@ -61,7 +60,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:id="@+id/utilityBillDate"
+                android:id="@+id/healthBillDate"
                 android:background="@drawable/cardview_boarder"
                 android:layout_marginTop="20dp"
                 android:padding="16dp"
@@ -73,7 +72,7 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/utilitySaveButton"
+                android:id="@+id/healthSaveButton"
                 android:text="Save"
                 android:textSize="18dp"
                 android:textColor="@color/white"
