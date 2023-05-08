@@ -106,6 +106,7 @@
         android:backgroundTint="@color/Teal"
         android:drawableRight="@drawable/convert"
         android:text="Convert"
+        android:textColor="@color/white"
         android:textAlignment="viewStart"
         android:textSize="20sp" />
 

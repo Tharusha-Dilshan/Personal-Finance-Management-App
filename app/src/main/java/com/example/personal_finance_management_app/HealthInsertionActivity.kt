@@ -52,17 +52,17 @@ class HealthInsertionActivity : AppCompatActivity() {
                 //Id for new record
                 var id = databaseRef.push().key!!
                 //create a health object
-                val health = HealthModel( healthBillName,healthBillAmount,healthBillDate)
+                val health = HealthModel( healthBillName,healthBillAmount,healthBillDate,id)
                 databaseRef.child(id).setValue(health).addOnCompleteListener {
                     if (it.isSuccessful){
                         Toast.makeText(this, "Your Data Added successfully", Toast.LENGTH_SHORT).show()
+                        intent = Intent(applicationContext, HealthFetchingActivity::class.java)
+                        startActivity(intent)
 
                         binding.healthBillName.text.clear()
                         binding.healthBillAmount.text.clear()
                         binding.healthBillDate.text.clear()
 
-                        intent = Intent(applicationContext, HealthFetchingActivity::class.java)
-                        startActivity(intent)
                     } else {
                         Toast.makeText(this, it.exception?.message, Toast.LENGTH_SHORT).show()
                     }
