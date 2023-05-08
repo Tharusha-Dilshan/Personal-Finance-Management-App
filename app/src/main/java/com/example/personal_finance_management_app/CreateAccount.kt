@@ -23,7 +23,7 @@ class CreateAccount : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance()
 
-        binding.SingUpButton.setOnClickListener {
+        binding.SingInButton.setOnClickListener {
             val name = binding.etName.text.toString()
             val email = binding.etEmail.text.toString()
             val password = binding.etPass.text.toString()
