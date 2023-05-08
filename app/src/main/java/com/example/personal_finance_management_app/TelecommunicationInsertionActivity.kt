@@ -49,7 +49,7 @@ class TelecommunicationInsertionActivity : AppCompatActivity() {
                 //Id for new record
                 var id = databaseRef.push().key!!
                 //create a health object
-                val tele = TelecommunicationModel( teleBillName,teleBillAmount,teleBillDate)
+                val tele = TelecommunicationModel( teleBillName,teleBillAmount,teleBillDate,id)
                 databaseRef.child(id).setValue(tele).addOnCompleteListener {
                     if (it.isSuccessful){
                         Toast.makeText(this, "Your Data Added successfully", Toast.LENGTH_SHORT).show()

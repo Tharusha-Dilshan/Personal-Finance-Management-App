@@ -68,6 +68,7 @@ class TelecommunicationFetchingActivity : AppCompatActivity() {
                     }
                 }
                 adapter.notifyDataSetChanged()
+                updateTotalAmount()
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -79,10 +80,30 @@ class TelecommunicationFetchingActivity : AppCompatActivity() {
         //Setting onclick on recyclerView each item
         adapter.setOnItemClickListener(object: TelecommunicationAdapter.onItemClickListener {
             override fun onItemClick(position: Int) {
+                intent = Intent(applicationContext, TelecommunicationDetailsActivity::class.java).also {
+                    it.putExtra("telName",hList[position].telName)
+                    it.putExtra("telAmount", hList[position].telAmount)
+                    it.putExtra("telDate", hList[position].telDate)
+                    it.putExtra("telId", hList[position].telId)
+                    startActivity(it)
+                }
             }
 
         })
 
+    }
+
+    private fun updateTotalAmount() {
+        var totalAmount = 0.0
+
+        for (expense in hList) {
+            val amount = expense.telAmount!!.toDouble()
+            if (amount != null) {
+                totalAmount += amount
+            }
+        }
+
+        binding.totalFeeTxt.text = String.format("%.2f", totalAmount)
     }
     private fun addDataToList(){
         hList.add(TelecommunicationModel("Dialog Router Bill","2300","2023/04/30"))
