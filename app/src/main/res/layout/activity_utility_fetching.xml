@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/page_bg"
+    android:layout_gravity="center_horizontal"
     tools:context=".UtilityFetchingActivity">
 
     <TextView
@@ -26,6 +27,7 @@
         android:layout_marginTop="70dp"
         android:layout_marginBottom="106dp"
         android:scrollbars="vertical"
+        android:layout_gravity="center_horizontal"
         tools:listitem="@layout/expenses_utility_item" />
 
     <LinearLayout
@@ -43,8 +45,8 @@
 
         <TextView
             android:id="@+id/textTotalAmount"
-            android:layout_width="25dp"
-            android:layout_height="40dp"
+            android:layout_width="113dp"
+            android:layout_height="42dp"
             android:layout_marginLeft="15dp"
             android:layout_weight="1"
             android:text="Total Amount: "
@@ -55,8 +57,8 @@
 
         <TextView
             android:id="@+id/totalFeeTxt"
-            android:layout_width="36dp"
-            android:layout_height="40dp"
+            android:layout_width="154dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="0"
             android:textColor="@color/black"
