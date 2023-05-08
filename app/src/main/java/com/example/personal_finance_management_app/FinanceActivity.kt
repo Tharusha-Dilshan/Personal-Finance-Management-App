@@ -7,6 +7,7 @@ import android.os.Bundle
 import com.example.personal_finance_management_app.databinding.ActivityFinanceBinding
 
 
+
 private lateinit var binding:ActivityFinanceBinding
 class FinanceActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
