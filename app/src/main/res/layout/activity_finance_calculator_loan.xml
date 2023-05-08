@@ -93,6 +93,7 @@
                 android:drawableRight="@drawable/calculator"
                 android:foregroundTintMode="add"
                 android:text="Calculate"
+                android:textColor="@color/white"
                 android:textSize="12sp" />
 
 
@@ -109,6 +110,7 @@
                 android:drawableTint="@color/colorAccent"
                 android:drawableTintMode="add"
                 android:text="Clear"
+                android:textColor="@color/white"
                 android:textSize="12sp" />
 
         </LinearLayout>
