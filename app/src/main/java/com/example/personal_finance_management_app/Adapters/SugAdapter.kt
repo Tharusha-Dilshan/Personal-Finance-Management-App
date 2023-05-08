@@ -36,7 +36,7 @@ class SugAdapter(private val sugList: ArrayList<SuggestionModel>) :
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.sugge_list_item, parent, false)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.activity_finance_sugge_list_item, parent, false)
         return ViewHolder(itemView, mListener)
     }
     override fun getItemCount(): Int {

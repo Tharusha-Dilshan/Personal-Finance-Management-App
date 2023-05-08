@@ -53,7 +53,7 @@ class Login : AppCompatActivity() {
                 //Log in
                 auth.signInWithEmailAndPassword(email, password).addOnCompleteListener{
                     if(it.isSuccessful){
-                        intent = Intent(applicationContext, DashHome::class.java)
+                        intent = Intent(applicationContext, HomePage::class.java)
                         startActivity(intent)
                     }else{
                         Toast.makeText(this, "Something went wrong, try again", Toast.LENGTH_SHORT).show()
@@ -71,7 +71,7 @@ class Login : AppCompatActivity() {
         super.onStart()
 
         if(auth.currentUser != null){
-            val intent = Intent(this, DashHome::class.java)
+            val intent = Intent(this, HomePage::class.java)
             startActivity(intent)
         }
     }

@@ -14,6 +14,9 @@
         android:theme="@style/Theme.PersonalFinanceManagementApp"
         tools:targetApi="31">
         <activity
+            android:name=".HomePage"
+            android:exported="true" />
+        <activity
             android:name=".SetGoals"
             android:exported="false" />
         <activity
@@ -26,13 +29,13 @@
             android:name=".UtilityUpdateDetailsActivity"
             android:exported="true" />
         <activity
-            android:name=".EditSuggestions"
+            android:name=".FinanceSuggestionEdit"
             android:exported="true" />
         <activity
-            android:name=".SuggestionDetails"
+            android:name=".FinanceSuggestionDetails"
             android:exported="true" />
         <activity
-            android:name=".PreferencesActivity"
+            android:name=".FinancePreferencesFetchingActivity"
             android:exported="true" />
         <activity
             android:name=".UtilityDetailsActivity"
@@ -62,13 +65,13 @@
             android:name=".ViewAsset"
             android:exported="false" />
         <activity
-            android:name=".Calculators"
+            android:name=".FinanceCalculators"
             android:exported="true" />
         <activity
-            android:name=".FetchingSuggestions"
+            android:name=".FinanceSuggestionFetching"
             android:exported="true" />
         <activity
-            android:name=".SubmitSuggestions"
+            android:name=".FinanceSuggestionsSubmit"
             android:exported="true" />
         <activity
             android:name=".FinanceActivity"
@@ -77,10 +80,10 @@
             android:name=".Portfolio"
             android:exported="true" />
         <activity
-            android:name=".CurrencyConvertor"
+            android:name=".FinanceCalculatorCurrencyConvertor"
             android:exported="true" />
         <activity
-            android:name=".LoanCalculator"
+            android:name=".FinanceCalculatorLoan"
             android:exported="true" />
         <activity
             android:name=".PortEditAsset"

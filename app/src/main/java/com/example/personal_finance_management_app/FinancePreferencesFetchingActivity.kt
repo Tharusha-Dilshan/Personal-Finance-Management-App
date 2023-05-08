@@ -4,21 +4,17 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.personal_finance_management_app.Adapters.PortfolioAdapter
 import com.example.personal_finance_management_app.Adapters.PrefAdapter
-import com.example.personal_finance_management_app.Adapters.SugAdapter
-import com.example.personal_finance_management_app.DataClasses.Asset
 import com.example.personal_finance_management_app.DataClasses.SuggestionModel
-import com.example.personal_finance_management_app.databinding.ActivityFetchingSuggetionsBinding
-import com.example.personal_finance_management_app.databinding.ActivityPortfolioBinding
-import com.example.personal_finance_management_app.databinding.ActivityPreferencesBinding
+import com.example.personal_finance_management_app.databinding.ActivityFinancePreferencesBinding
+
 
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
-class PreferencesActivity : AppCompatActivity() {
+class FinancePreferencesFetchingActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityPreferencesBinding
+    private lateinit var binding: ActivityFinancePreferencesBinding
     private lateinit var auth: FirebaseAuth
     private lateinit var databaseRef: DatabaseReference
     private lateinit var uid:String
@@ -27,7 +23,7 @@ class PreferencesActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityPreferencesBinding.inflate(layoutInflater)
+        binding = ActivityFinancePreferencesBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
 
@@ -38,6 +34,7 @@ class PreferencesActivity : AppCompatActivity() {
         //databaseRef = FirebaseDatabase.getInstance().reference.child("FinanceSuggestions").child(uid)
         databaseRef = FirebaseDatabase.getInstance().getReference("AllFinSuggestions")
 //        Toast.makeText(this, uid, Toast.LENGTH_SHORT).show()
+
 
         var recyclerView = binding.rvSuggestion2
 
@@ -61,7 +58,7 @@ class PreferencesActivity : AppCompatActivity() {
             }
 
             override fun onCancelled(error: DatabaseError) {
-                Toast.makeText(this@PreferencesActivity, error.message, Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@FinancePreferencesFetchingActivity, error.message, Toast.LENGTH_SHORT).show()
             }
         })
 

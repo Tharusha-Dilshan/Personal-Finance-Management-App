@@ -5,19 +5,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.personal_finance_management_app.Adapters.PortfolioAdapter
 import com.example.personal_finance_management_app.Adapters.SugAdapter
-import com.example.personal_finance_management_app.DataClasses.Asset
 import com.example.personal_finance_management_app.DataClasses.SuggestionModel
-import com.example.personal_finance_management_app.databinding.ActivityFetchingSuggetionsBinding
-import com.example.personal_finance_management_app.databinding.ActivityPortfolioBinding
-
+import com.example.personal_finance_management_app.databinding.ActivityFinanceSuggestionsFetchingBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
-class FetchingSuggestions : AppCompatActivity() {
+class FinanceSuggestionFetching : AppCompatActivity() {
 
-    private lateinit var binding: ActivityFetchingSuggetionsBinding
+    private lateinit var binding: ActivityFinanceSuggestionsFetchingBinding
     private lateinit var auth: FirebaseAuth
     private lateinit var databaseRef: DatabaseReference
     private lateinit var uid:String
@@ -26,7 +22,7 @@ class FetchingSuggestions : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityFetchingSuggetionsBinding.inflate(layoutInflater)
+        binding = ActivityFinanceSuggestionsFetchingBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
 
@@ -60,7 +56,7 @@ class FetchingSuggestions : AppCompatActivity() {
             }
 
             override fun onCancelled(error: DatabaseError) {
-                Toast.makeText(this@FetchingSuggestions, error.message, Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@FinanceSuggestionFetching, error.message, Toast.LENGTH_SHORT).show()
             }
         })
 
@@ -69,7 +65,7 @@ class FetchingSuggestions : AppCompatActivity() {
             override fun onItemClick(position: Int) {
 
 
-                intent = Intent(applicationContext, SuggestionDetails::class.java).also {
+                intent = Intent(applicationContext, FinanceSuggestionDetails::class.java).also {
                     it.putExtra("sugId", mList[position].sugId)
                     it.putExtra("bankName", mList[position].bankName)
                     it.putExtra("finType", mList[position].finType)

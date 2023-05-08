@@ -13,7 +13,7 @@ import java.text.DecimalFormat
 
 
 
-class CurrencyConvertor : AppCompatActivity() {
+class FinanceCalculatorCurrencyConvertor : AppCompatActivity() {
     private var fromCurrency: String = "USD"
     private var toCurrency: String = "USD"
     private var exchangeRate: Double = 1.0
@@ -24,7 +24,7 @@ class CurrencyConvertor : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_currency_convertor)
+        setContentView(R.layout.activity_finance_calculator_currency_convertor)
 
         // Set up the spinner for "From Currency"
         val spinnerFrom = findViewById<Spinner>(R.id.spinner_from)
