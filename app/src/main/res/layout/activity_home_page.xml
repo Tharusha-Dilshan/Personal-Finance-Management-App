@@ -55,13 +55,15 @@
         android:rowCount="1">
 
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/homeAvatarImg"
-            android:layout_width="@dimen/ImageViewWidth"
-            android:layout_height="@dimen/ImageViewHeight"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_row="0"
             android:layout_column="0"
-            android:src="@drawable/home_avatar" />
+            android:src="@drawable/home_avatar"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp" />
 
 
     </GridLayout>
@@ -69,14 +71,16 @@
 
     <TextView
         android:id="@+id/userName"
-        android:layout_width="@dimen/HomeTextviewWidth"
-        android:layout_height="@dimen/TextViewHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="94dp"
+        android:layout_marginTop="76dp"
         android:gravity="center"
         android:hint="User Name"
-        android:textSize="10sp"
+        android:textColor="@color/divider_grey"
+        android:textColorHint="@color/divider_grey"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
     <GridLayout

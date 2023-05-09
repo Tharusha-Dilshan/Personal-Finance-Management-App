@@ -10,4 +10,6 @@
     <dimen name="cardElevation">8dp</dimen>
     <dimen name="expensesDrawablePadding">12dp</dimen>
     <dimen name="expensesPaddingLeft">18dp</dimen>
+    <dimen name="expensebtnWidth">320dp</dimen>
+    <dimen name="expensesbtnHeight" />
 </resources>

@@ -74,7 +74,7 @@ class HomePage : AppCompatActivity() {
         databaseRef.child(uid).addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 user = snapshot.getValue(User::class.java)!!
-                binding.userName.text = user.name
+                binding.userName.text = "Hello "+ user.name+"..!!"
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -87,6 +87,7 @@ class HomePage : AppCompatActivity() {
 
         // Sign the user out of Firebase
         auth.signOut()
+        finish()
 
         // TODO: Clear any saved user session data or preferences
     }

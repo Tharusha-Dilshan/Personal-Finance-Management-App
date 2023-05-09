@@ -49,7 +49,7 @@
                     app:layout_constraintBottom_toBottomOf="@+id/view"
                     app:layout_constraintEnd_toEndOf="@+id/view"
                     app:layout_constraintTop_toTopOf="@+id/view"
-                    app:srcCompat="@drawable/home_avatar" />
+                    app:srcCompat="@drawable/signup_avatar" />
 
                 <ImageView
                     android:id="@+id/imageView14"
