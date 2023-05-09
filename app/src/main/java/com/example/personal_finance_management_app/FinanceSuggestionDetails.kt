@@ -14,6 +14,7 @@ class FinanceSuggestionDetails : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var database: FirebaseDatabase
     private lateinit var databaseRef: DatabaseReference
+    private lateinit var databaseRef2: DatabaseReference
     private lateinit var uid: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,6 +28,7 @@ class FinanceSuggestionDetails : AppCompatActivity() {
         uid = auth.currentUser?.uid.toString()
         databaseRef = FirebaseDatabase.getInstance().reference
             .child("FinanceSuggestions").child(uid)
+        databaseRef2 = FirebaseDatabase.getInstance().getReference("AllFinSuggestions")
 
         val sugId = intent.getStringExtra("sugId")
         val bankName = intent.getStringExtra("bankName")
@@ -62,6 +64,7 @@ class FinanceSuggestionDetails : AppCompatActivity() {
                     startActivity(intent)
                 }
             }
+            databaseRef2.child(sugId!!).removeValue().addOnCompleteListener {}
         }
 
 

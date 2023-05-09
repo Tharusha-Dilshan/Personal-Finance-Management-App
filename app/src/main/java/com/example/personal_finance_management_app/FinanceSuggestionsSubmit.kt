@@ -50,10 +50,10 @@ class FinanceSuggestionsSubmit : AppCompatActivity() {
 
                 //Id for new record
                 var id = databaseRef.push().key!!
-                var id2 = databaseRef2.push().key!!
+                //var id2 = databaseRef2.push().key!!
                 //create a suggestion object
                 val suggestion = SuggestionModel(id,bankName,finType,addedSug,)
-                val suggestion2 = SuggestionModel(id2,bankName,finType,addedSug,)
+                val suggestion2 = SuggestionModel(id,bankName,finType,addedSug,)
                 databaseRef.child(id).setValue(suggestion).addOnCompleteListener {
                     if (it.isSuccessful){
                         intent = Intent(applicationContext, FinanceActivity::class.java)
@@ -63,7 +63,7 @@ class FinanceSuggestionsSubmit : AppCompatActivity() {
                         Toast.makeText(this, it.exception?.message, Toast.LENGTH_SHORT).show()
                     }
                 }
-                databaseRef2.child(id2).setValue(suggestion2).addOnCompleteListener {
+                databaseRef2.child(id).setValue(suggestion2).addOnCompleteListener {
 
                 }
             }
