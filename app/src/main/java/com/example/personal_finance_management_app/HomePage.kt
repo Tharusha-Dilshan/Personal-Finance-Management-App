@@ -1,12 +1,16 @@
 package com.example.personal_finance_management_app
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
+import androidx.core.content.ContextCompat.startActivity
 import com.example.personal_finance_management_app.DataClasses.User
 import com.example.personal_finance_management_app.databinding.ActivityHomePageBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
+import java.lang.System.exit
+
 
 class HomePage : AppCompatActivity() {
 
@@ -52,21 +56,25 @@ class HomePage : AppCompatActivity() {
             // Launch LoginActivity to start a new user session
             intent = Intent(applicationContext, Login::class.java)
             startActivity(intent)
-
-            // Finish the current activity to prevent user from returning using the back button
             finish()
+            // Finish the current activity to prevent user from returning using the back button
+            onBackPressed(System.exit(0))
         }
         binding.logOutTxt.setOnClickListener{
             // Clear any saved user session data or preferences
             clearUserSession()
-
+            finish()
             // Launch LoginActivity to start a new user session
             intent = Intent(applicationContext, Login::class.java)
             startActivity(intent)
 
             // Finish the current activity to prevent user from returning using the back button
-            finish()
+
         }
+
+    }
+
+    private fun onBackPressed(exit: Unit) {
 
     }
 
@@ -87,8 +95,13 @@ class HomePage : AppCompatActivity() {
 
         // Sign the user out of Firebase
         auth.signOut()
-        finish()
 
         // TODO: Clear any saved user session data or preferences
     }
+//    @Override
+//    public override fun onBackPressed() {
+//       System.exit(0)
+//    }
+
 }
+

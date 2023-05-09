@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="GridLayoutWidth">70dp</dimen>
-    <dimen name="GridLayoutHeight">70dp</dimen>
-    <dimen name="ImageViewWidth">match_parent</dimen>
-    <dimen name="ImageViewHeight">match_parent</dimen>
-    <dimen name="TextViewHeight">wrap_content</dimen>
-    <dimen name="HomeTextviewWidth">70dp</dimen>
-    <dimen name="cardCornerRadius">8dp</dimen>
-    <dimen name="cardElevation">8dp</dimen>
-    <dimen name="expensesDrawablePadding">12dp</dimen>
-    <dimen name="expensesPaddingLeft">18dp</dimen>
-    <dimen name="expensebtnWidth">320dp</dimen>
-    <dimen name="expensesbtnHeight" />
+<!--    <dimen name="GridLayoutWidth">70dp</dimen>-->
+<!--    <dimen name="GridLayoutHeight">70dp</dimen>-->
+<!--    <dimen name="ImageViewWidth">match_parent</dimen>-->
+<!--    <dimen name="ImageViewHeight">match_parent</dimen>-->
+<!--    <dimen name="TextViewHeight">wrap_content</dimen>-->
+<!--    <dimen name="HomeTextviewWidth">70dp</dimen>-->
+<!--    <dimen name="cardCornerRadius">8dp</dimen>-->
+<!--    <dimen name="cardElevation">8dp</dimen>-->
+<!--    <dimen name="expensesDrawablePadding">12dp</dimen>-->
+<!--    <dimen name="expensesPaddingLeft">18dp</dimen>-->
+<!--    <dimen name="expensebtnWidth">320dp</dimen>-->
+<!--    <dimen name="expensesbtnHeight" />-->
 </resources>
