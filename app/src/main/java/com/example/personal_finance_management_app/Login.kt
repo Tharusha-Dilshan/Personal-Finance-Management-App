@@ -21,6 +21,11 @@ class Login : AppCompatActivity() {
         //Initializing auth
         auth = FirebaseAuth.getInstance()
 
+        //Forgot password
+        binding .tvForgotPassword.setOnClickListener() {
+            intent = Intent(applicationContext, ForgotPasswordActivity::class.java)
+            startActivity(intent)
+        }
 
         //set onclick listner on login button
         binding.LoginButton.setOnClickListener() {
