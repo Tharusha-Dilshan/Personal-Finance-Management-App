@@ -36,7 +36,7 @@ class FinanceActivity : AppCompatActivity() {
             startActivity(intent)
         }
         binding.fdcalimg.setOnClickListener{
-            intent = Intent(applicationContext, FinanceCalculatorLoan::class.java)
+            intent = Intent(applicationContext, FinanceCalculatorFixedDeposit::class.java)
             startActivity(intent)
         }
         binding.prefimg.setOnClickListener{
