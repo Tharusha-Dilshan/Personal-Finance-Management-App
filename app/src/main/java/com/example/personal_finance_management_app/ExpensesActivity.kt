@@ -43,5 +43,10 @@ class ExpensesActivity : AppCompatActivity() {
             val intent = Intent(this, HealthFetchingActivity::class.java)
             startActivity(intent)
         }
+
+        binding.backBtn.setOnClickListener {
+            val intent = Intent(this, HomePage::class.java)
+            startActivity(intent)
+        }
     }
 }
