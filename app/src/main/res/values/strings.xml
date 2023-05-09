@@ -121,6 +121,7 @@
     <string name="transaction">Transaction</string>
     <string name="search">Search ...</string>
     <string name="healthTX">Health</string>
+    <string name="cardLayoutGravity">fill</string>
 
     <string-array name="expenses">
         <item>Utility</item>

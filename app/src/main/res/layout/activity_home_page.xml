@@ -8,11 +8,9 @@
     tools:context=".HomePage">
 
 
-
-
     <GridLayout
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="@dimen/GridLayoutWidth"
+        android:layout_height="@dimen/GridLayoutHeight"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="20dp"
@@ -25,8 +23,8 @@
 
         <ImageView
             android:id="@+id/homeLogOutImg"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="@dimen/ImageViewWidth"
+            android:layout_height="@dimen/ImageViewHeight"
             android:layout_row="0"
             android:layout_column="0"
             android:src="@drawable/logoutimg" />
@@ -36,8 +34,8 @@
 
     <TextView
         android:id="@+id/logOutTxt"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/HomeTextviewWidth"
+        android:layout_height="@dimen/TextViewHeight"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="80dp"
@@ -47,8 +45,8 @@
         android:textStyle="bold" />
 
     <GridLayout
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="@dimen/GridLayoutWidth"
+        android:layout_height="@dimen/GridLayoutHeight"
         android:layout_alignParentTop="true"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
@@ -59,8 +57,8 @@
 
         <ImageView
             android:id="@+id/homeAvatarImg"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="@dimen/ImageViewWidth"
+            android:layout_height="@dimen/ImageViewHeight"
             android:layout_row="0"
             android:layout_column="0"
             android:src="@drawable/home_avatar" />
@@ -71,8 +69,8 @@
 
     <TextView
         android:id="@+id/userName"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/HomeTextviewWidth"
+        android:layout_height="@dimen/TextViewHeight"
         android:layout_alignParentTop="true"
         android:layout_marginStart="20dp"
         android:layout_marginTop="94dp"
@@ -101,8 +99,8 @@
             android:layout_column="0"
             android:layout_columnWeight="1"
             android:layout_gravity="fill"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp"
+            app:cardCornerRadius="@dimen/cardCornerRadius"
+            app:cardElevation="@dimen/cardElevation"
             app:cardUseCompatPadding="true">
 
             <LinearLayout
@@ -137,8 +135,8 @@
             android:layout_column="1"
             android:layout_columnWeight="1"
             android:layout_gravity="fill"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp"
+            app:cardCornerRadius="@dimen/cardCornerRadius"
+            app:cardElevation="@dimen/cardElevation"
             app:cardUseCompatPadding="true">
 
             <LinearLayout
@@ -173,8 +171,8 @@
             android:layout_column="0"
             android:layout_columnWeight="1"
             android:layout_gravity="fill"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp"
+            app:cardCornerRadius="@dimen/cardCornerRadius"
+            app:cardElevation="@dimen/cardElevation"
             app:cardUseCompatPadding="true">
 
             <LinearLayout
@@ -208,8 +206,8 @@
             android:layout_column="1"
             android:layout_columnWeight="1"
             android:layout_gravity="fill"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp"
+            app:cardCornerRadius="@dimen/cardCornerRadius"
+            app:cardElevation="@dimen/cardElevation"
             app:cardUseCompatPadding="true">
 
             <LinearLayout
