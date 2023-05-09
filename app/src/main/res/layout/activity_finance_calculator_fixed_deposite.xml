@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FinanceCalculatorFixedDeposit"
+    android:background="@drawable/page_bg">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/mlogo" />
+
+        <TextView
+            android:id="@+id/fdCalMainText"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="30dp"
+            android:text="FD Calculator"
+            android:textAlignment="center"
+            android:textSize="38sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/principalEditText"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:hint="FD Amount"
+            android:inputType="numberDecimal"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/interestRateEditText"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:hint="Interest Rate"
+            android:inputType="numberDecimal"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/tenureEditText"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:hint="FD Term (In Years)"
+            android:inputType="number"
+            android:textSize="24sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="86dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/calculateButton"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="@color/Teal"
+                android:drawableRight="@drawable/calculator"
+                android:foregroundTintMode="add"
+                android:text="Calculate"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+
+            <Button
+                android:id="@+id/resetButton"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="@android:color/holo_red_light"
+                android:drawableRight="@drawable/cross_mark"
+                android:drawableTint="@color/colorAccent"
+                android:drawableTintMode="add"
+                android:text="Clear"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/resultTextView"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@android:drawable/divider_horizontal_textfield"
+            android:backgroundTintMode="add"
+            android:ems="10"
+            android:hint="0.00"
+            android:paddingTop="8dp"
+            android:textAlignment="center"
+            android:textColor="@color/lightGray_bg"
+            android:textColorHint="@color/divider_grey"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
