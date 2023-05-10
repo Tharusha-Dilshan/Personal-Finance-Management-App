@@ -64,11 +64,12 @@ class FinanceSuggestionEdit : AppCompatActivity() {
                 } else {
                     Toast.makeText(this, it.exception?.message, Toast.LENGTH_SHORT).show()
                 }
+
             }
             databaseRef2.child(sugId!!).updateChildren(map).addOnCompleteListener {
 
             }
-
+            finish()
         }
 
     }

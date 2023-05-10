@@ -73,8 +73,11 @@ class FinanceSuggestionFetching : AppCompatActivity() {
 
                     startActivity(it)
                 }
-
+                finish()
             }
-        })
+        }
+
+        )
+
         }
     }
