@@ -67,13 +67,16 @@ class FinanceSuggestionsSubmit : AppCompatActivity() {
 
                 }
             }
+            finish()
         }
         binding.sugCancelBtn.setOnClickListener{
             binding.sugInputField.text?.clear()
+
         }
         binding.sugEditBtn.setOnClickListener{
             intent = Intent(applicationContext, FinanceSuggestionFetching::class.java)
             startActivity(intent)
+            finish()
         }
     }
 }

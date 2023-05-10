@@ -54,6 +54,7 @@ class FinanceSuggestionDetails : AppCompatActivity() {
 
                 startActivity(it)
             }
+            finish()
         }
 
         binding.btnDelete.setOnClickListener{
@@ -65,6 +66,7 @@ class FinanceSuggestionDetails : AppCompatActivity() {
                 }
             }
             databaseRef2.child(sugId!!).removeValue().addOnCompleteListener {}
+            finish()
         }
 
 
