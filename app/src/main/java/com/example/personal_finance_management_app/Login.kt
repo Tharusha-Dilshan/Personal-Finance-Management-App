@@ -65,7 +65,7 @@ class Login : AppCompatActivity() {
                     }
                 }
             }
-            finish()
+            //finish()
         }
         binding.RegistrationButton1.setOnClickListener{
             intent = Intent(applicationContext, CreateAccount::class.java)
