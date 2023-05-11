@@ -44,6 +44,10 @@ class HomePage : AppCompatActivity() {
             intent = Intent(applicationContext, Portfolio::class.java)
             startActivity(intent)
         }
+        binding.homeGoalImg.setOnClickListener {
+            intent = Intent(applicationContext, SetGoals::class.java)
+            startActivity(intent)
+        }
 
         binding.homeLogOutImg.setOnClickListener{
             // Clear any saved user session data or preferences
