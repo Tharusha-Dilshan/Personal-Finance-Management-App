@@ -45,6 +45,8 @@ class HealthDetailsActivity : AppCompatActivity() {
                 it.putExtra("healthId", healthId)
                 startActivity(it)
             }
+
+            finish()
         }
 
         binding.btnDelete.setOnClickListener {
@@ -55,6 +57,8 @@ class HealthDetailsActivity : AppCompatActivity() {
                     startActivity(intent)
                 }
             }
+
+            finish()
         }
 
 
