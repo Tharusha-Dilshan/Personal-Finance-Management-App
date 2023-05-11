@@ -45,6 +45,7 @@ class UtilityDetailsActivity : AppCompatActivity() {
                 it.putExtra("utilityId", utilityId)
                 startActivity(it)
             }
+            finish()
         }
 
         binding.btnDelete.setOnClickListener {
@@ -55,6 +56,7 @@ class UtilityDetailsActivity : AppCompatActivity() {
                     startActivity(intent)
                 }
             }
+            finish()
         }
 
 

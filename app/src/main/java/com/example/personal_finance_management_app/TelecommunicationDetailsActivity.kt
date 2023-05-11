@@ -46,6 +46,7 @@ class TelecommunicationDetailsActivity : AppCompatActivity() {
                 it.putExtra("telId", telId)
                 startActivity(it)
             }
+            finish()
         }
 
         binding.btnDelete.setOnClickListener {
@@ -56,6 +57,7 @@ class TelecommunicationDetailsActivity : AppCompatActivity() {
                     startActivity(intent)
                 }
             }
+            finish()
         }
     }
 }

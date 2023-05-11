@@ -52,14 +52,14 @@ class UtilityUpdateDetailsActivity : AppCompatActivity() {
             //update database from hashMap
             databaseRef.child(utilityId!!).updateChildren(map).addOnCompleteListener {
                 if (it.isSuccessful) {
-                    intent = Intent(applicationContext, UtilityFetchingActivity::class.java)
-                    startActivity(intent)
+//                    intent = Intent(applicationContext, UtilityFetchingActivity::class.java)
+//                    startActivity(intent)
                     Toast.makeText(this, "Details updated successfully", Toast.LENGTH_SHORT).show()
                 } else {
                     Toast.makeText(this, it.exception?.message, Toast.LENGTH_SHORT).show()
                 }
             }
-
+            finish()
         }
     }
 }

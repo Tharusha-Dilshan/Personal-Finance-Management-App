@@ -57,7 +57,7 @@
                     <Button
                         android:id="@+id/btnUtility"
                         android:layout_width="320dp"
-                        android:layout_height="50dp"
+                        android:layout_height="match_parent"
                         android:layout_marginTop="30dp"
                         android:layout_marginBottom="12dp"
                         android:background="@drawable/expenses_btn"
@@ -73,7 +73,7 @@
                     <Button
                         android:id="@+id/btnTelecommunication"
                         android:layout_width="320dp"
-                        android:layout_height="50dp"
+                        android:layout_height="match_parent"
                         android:layout_marginTop="12dp"
                         android:layout_marginBottom="12dp"
                         android:background="@drawable/expenses_btn"
@@ -88,7 +88,7 @@
                     <Button
                         android:id="@+id/btnHealth"
                         android:layout_width="320dp"
-                        android:layout_height="50dp"
+                        android:layout_height="match_parent"
                         android:layout_marginTop="12dp"
                         android:layout_marginBottom="12dp"
                         android:background="@drawable/expenses_btn"
@@ -103,7 +103,7 @@
                     <Button
                         android:id="@+id/btnFood"
                         android:layout_width="320dp"
-                        android:layout_height="50dp"
+                        android:layout_height="match_parent"
                         android:layout_marginTop="12dp"
                         android:layout_marginBottom="12dp"
                         android:background="@drawable/expenses_btn"
@@ -118,7 +118,7 @@
                     <Button
                         android:id="@+id/btnGroceries"
                         android:layout_width="320dp"
-                        android:layout_height="50dp"
+                        android:layout_height="match_parent"
                         android:layout_marginTop="12dp"
                         android:layout_marginBottom="12dp"
                         android:background="@drawable/expenses_btn"
@@ -133,7 +133,7 @@
                     <Button
                         android:id="@+id/btnLoan"
                         android:layout_width="320dp"
-                        android:layout_height="50dp"
+                        android:layout_height="match_parent"
                         android:layout_marginTop="12dp"
                         android:background="@drawable/expenses_btn"
                         android:drawableLeft="@drawable/loan3"
@@ -147,7 +147,7 @@
                     <Button
                         android:id="@+id/btnLeasing"
                         android:layout_width="320dp"
-                        android:layout_height="50dp"
+                        android:layout_height="match_parent"
                         android:layout_marginTop="12dp"
                         android:layout_marginBottom="12dp"
                         android:background="@drawable/expenses_btn"
@@ -162,7 +162,7 @@
                     <Button
                         android:id="@+id/btnTransaction"
                         android:layout_width="320dp"
-                        android:layout_height="50dp"
+                        android:layout_height="match_parent"
                         android:layout_marginTop="12dp"
                         android:background="@drawable/expenses_btn"
                         android:drawableLeft="@drawable/card2"
@@ -176,7 +176,7 @@
                     <Button
                         android:id="@+id/btnOther"
                         android:layout_width="320dp"
-                        android:layout_height="50dp"
+                        android:layout_height="match_parent"
                         android:layout_marginTop="12dp"
                         android:background="@drawable/expenses_btn"
                         android:drawableLeft="@drawable/other_icon"
