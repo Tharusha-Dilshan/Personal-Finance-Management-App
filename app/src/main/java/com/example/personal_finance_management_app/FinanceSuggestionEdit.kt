@@ -14,6 +14,7 @@ class FinanceSuggestionEdit : AppCompatActivity() {
     private lateinit var binding:ActivityFinanceSuggestionsEditBinding
     private lateinit var auth: FirebaseAuth
     private lateinit var databaseRef: DatabaseReference
+    private lateinit var databaseRef2: DatabaseReference
     private lateinit var uid: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,6 +27,7 @@ class FinanceSuggestionEdit : AppCompatActivity() {
         uid = auth.currentUser?.uid.toString()
         databaseRef = FirebaseDatabase.getInstance().reference
             .child("FinanceSuggestions").child(uid)
+        databaseRef2 = FirebaseDatabase.getInstance().getReference("AllFinSuggestions")
 
 
         val sugId = intent.getStringExtra("sugId")
@@ -62,8 +64,12 @@ class FinanceSuggestionEdit : AppCompatActivity() {
                 } else {
                     Toast.makeText(this, it.exception?.message, Toast.LENGTH_SHORT).show()
                 }
-            }
 
+            }
+            databaseRef2.child(sugId!!).updateChildren(map).addOnCompleteListener {
+
+            }
+            finish()
         }
 
     }

@@ -22,7 +22,7 @@
         <item>Select Finance Type</item>
         <item>Fixed Deposit</item>
         <item>Loan</item>
-        <item>Leasings</item>
+        <item>Leasing</item>
         <item>Insurance</item>
         <item>Exchange Rates</item>
     </string-array>
@@ -33,7 +33,9 @@
         <item>NSB</item>
         <item>Com-Bank</item>
         <item>Sampath</item>
-        <item>Peoples Bank</item>
+        <item>Jana Shakthi</item>
+        <item>Peoples Leasing</item>
+        <item>Pan Asia</item>
     </string-array>
     <string-array name="tPeriod">
         <item>03 Months</item>
