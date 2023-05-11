@@ -34,6 +34,7 @@ class HealthFetchingActivity : AppCompatActivity() {
         binding.backBtn.setOnClickListener{
             intent = Intent(applicationContext, ExpensesActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
         //initialize variables

@@ -47,6 +47,7 @@ class ExpensesActivity : AppCompatActivity() {
         binding.backBtn.setOnClickListener {
             val intent = Intent(this, HomePage::class.java)
             startActivity(intent)
+            finish()
         }
     }
 }

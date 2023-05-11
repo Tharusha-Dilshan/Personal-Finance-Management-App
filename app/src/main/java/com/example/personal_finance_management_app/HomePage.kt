@@ -56,20 +56,20 @@ class HomePage : AppCompatActivity() {
             // Launch LoginActivity to start a new user session
             intent = Intent(applicationContext, Login::class.java)
             startActivity(intent)
-            finish()
+
             // Finish the current activity to prevent user from returning using the back button
-            onBackPressed(System.exit(0))
+            finish()
         }
         binding.logOutTxt.setOnClickListener{
             // Clear any saved user session data or preferences
             clearUserSession()
-            finish()
+
             // Launch LoginActivity to start a new user session
             intent = Intent(applicationContext, Login::class.java)
             startActivity(intent)
 
             // Finish the current activity to prevent user from returning using the back button
-
+            finish()
         }
 
     }
