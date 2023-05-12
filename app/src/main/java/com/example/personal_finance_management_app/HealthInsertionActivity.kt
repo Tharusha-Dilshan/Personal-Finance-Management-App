@@ -1,6 +1,5 @@
 package com.example.personal_finance_management_app
 
-import android.app.Dialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -56,8 +55,6 @@ class HealthInsertionActivity : AppCompatActivity() {
                 databaseRef.child(id).setValue(health).addOnCompleteListener {
                     if (it.isSuccessful){
                         Toast.makeText(this, "Your Data Added successfully", Toast.LENGTH_SHORT).show()
-                        intent = Intent(applicationContext, HealthFetchingActivity::class.java)
-                        startActivity(intent)
 
                         binding.healthBillName.text.clear()
                         binding.healthBillAmount.text.clear()
@@ -67,6 +64,9 @@ class HealthInsertionActivity : AppCompatActivity() {
                         Toast.makeText(this, it.exception?.message, Toast.LENGTH_SHORT).show()
                     }
                 }
+                intent = Intent(applicationContext, HealthFetchingActivity::class.java)
+                startActivity(intent)
+                finish()
             }
         }
     }

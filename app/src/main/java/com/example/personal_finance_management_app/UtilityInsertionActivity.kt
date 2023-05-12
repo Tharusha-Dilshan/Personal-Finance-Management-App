@@ -51,14 +51,11 @@ class UtilityInsertionActivity : AppCompatActivity() {
             }else {
                 //Id for new record
                 var id = databaseRef.push().key!!
-                //create a health object
+                //create a utility object
                 val utility = UtilityModel( utilityBillName,utilityBillAmount,utilityBillDate,id)
                 databaseRef.child(id).setValue(utility).addOnCompleteListener {
                     if (it.isSuccessful){
                         Toast.makeText(this, "Your Data Added successfully", Toast.LENGTH_SHORT).show()
-
-                        intent = Intent(applicationContext, UtilityFetchingActivity::class.java)
-                        startActivity(intent)
 
                         binding.utilityBillName.text.clear()
                         binding.utilityBillAmount.text.clear()
@@ -68,6 +65,9 @@ class UtilityInsertionActivity : AppCompatActivity() {
                         Toast.makeText(this, it.exception?.message, Toast.LENGTH_SHORT).show()
                     }
                 }
+                intent = Intent(applicationContext, UtilityFetchingActivity::class.java)
+                startActivity(intent)
+                finish()
             }
         }
     }

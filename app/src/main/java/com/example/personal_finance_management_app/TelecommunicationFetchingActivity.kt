@@ -33,6 +33,7 @@ class TelecommunicationFetchingActivity : AppCompatActivity() {
         binding.addTel.setOnClickListener{
             intent = Intent(applicationContext,TelecommunicationInsertionActivity::class.java)
             startActivity(intent)
+            finish()
         }
         binding.backBtn.setOnClickListener{
             intent = Intent(applicationContext,ExpensesActivity::class.java)

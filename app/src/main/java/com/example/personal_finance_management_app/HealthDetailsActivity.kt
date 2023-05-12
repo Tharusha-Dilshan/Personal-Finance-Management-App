@@ -53,8 +53,10 @@ class HealthDetailsActivity : AppCompatActivity() {
             databaseRef.child(healthId!!).removeValue().addOnCompleteListener {
                 if( it.isSuccessful){
                     Toast.makeText(this, "Item deleted", Toast.LENGTH_SHORT).show()
-                    intent = Intent(applicationContext, HealthFetchingActivity::class.java)
-                    startActivity(intent)
+//                    intent = Intent(applicationContext, HealthFetchingActivity::class.java)
+//                    startActivity(intent)
+                } else {
+                    Toast.makeText(this, it.exception?.message, Toast.LENGTH_SHORT).show()
                 }
             }
 
