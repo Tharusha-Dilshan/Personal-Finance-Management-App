@@ -57,6 +57,7 @@ class EditGoal : AppCompatActivity() {
                     Toast.makeText(this, it.exception?.message, Toast.LENGTH_SHORT).show()
                 }
             }
+            finish()
         }
 
         binding.deleteBtn.setOnClickListener {
@@ -67,6 +68,8 @@ class EditGoal : AppCompatActivity() {
                     startActivity(intent)
                 }
             }
+            finish()
         }
+
     }
 }

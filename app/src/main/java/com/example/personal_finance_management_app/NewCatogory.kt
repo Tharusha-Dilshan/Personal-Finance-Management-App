@@ -56,6 +56,7 @@ class NewCatogory : AppCompatActivity() {
                     }
                 }
             }
+            finish()
         }
     }
 }

@@ -57,6 +57,7 @@ class SetGoals : AppCompatActivity() {
             intent = Intent(applicationContext, NewCatogory::class.java)
             startActivity(intent)
         }
+
     }
 
     private fun retrieveData() {
