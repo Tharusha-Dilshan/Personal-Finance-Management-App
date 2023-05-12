@@ -61,8 +61,8 @@ class FinanceSuggestionDetails : AppCompatActivity() {
             databaseRef.child(sugId!!).removeValue().addOnCompleteListener {
                 if( it.isSuccessful){
                     Toast.makeText(this, "Suggestion Deleted", Toast.LENGTH_SHORT).show()
-                    intent = Intent(applicationContext, FinanceSuggestionFetching::class.java)
-                    startActivity(intent)
+                    //intent = Intent(applicationContext, FinanceSuggestionFetching::class.java)
+                    //startActivity(intent)
                 }
             }
             databaseRef2.child(sugId!!).removeValue().addOnCompleteListener {}

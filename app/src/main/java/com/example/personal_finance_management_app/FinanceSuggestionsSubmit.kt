@@ -56,8 +56,8 @@ class FinanceSuggestionsSubmit : AppCompatActivity() {
                 val suggestion2 = SuggestionModel(id,bankName,finType,addedSug,)
                 databaseRef.child(id).setValue(suggestion).addOnCompleteListener {
                     if (it.isSuccessful){
-                        intent = Intent(applicationContext, FinanceActivity::class.java)
-                        startActivity(intent)
+                        //intent = Intent(applicationContext, FinanceActivity::class.java)
+                        //startActivity(intent)
                         Toast.makeText(this, "Your Suggestion added successfully", Toast.LENGTH_SHORT).show()
                     } else {
                         Toast.makeText(this, it.exception?.message, Toast.LENGTH_SHORT).show()

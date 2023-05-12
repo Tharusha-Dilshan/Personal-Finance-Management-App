@@ -73,7 +73,7 @@ class FinanceSuggestionFetching : AppCompatActivity() {
 
                     startActivity(it)
                 }
-                finish()
+                //finish()
             }
         }
 
