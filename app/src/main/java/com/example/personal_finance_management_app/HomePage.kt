@@ -1,12 +1,16 @@
 package com.example.personal_finance_management_app
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
+import androidx.core.content.ContextCompat.startActivity
 import com.example.personal_finance_management_app.DataClasses.User
 import com.example.personal_finance_management_app.databinding.ActivityHomePageBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
+import java.lang.System.exit
+
 
 class HomePage : AppCompatActivity() {
 
@@ -70,6 +74,10 @@ class HomePage : AppCompatActivity() {
 
     }
 
+    private fun onBackPressed(exit: Unit) {
+
+    }
+
     private fun getUserData() {
         databaseRef.child(uid).addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
@@ -90,4 +98,10 @@ class HomePage : AppCompatActivity() {
 
         // TODO: Clear any saved user session data or preferences
     }
+//    @Override
+//    public override fun onBackPressed() {
+//       System.exit(0)
+//    }
+
 }
+
