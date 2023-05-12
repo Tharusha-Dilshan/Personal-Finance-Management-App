@@ -58,8 +58,8 @@ class FinanceSuggestionEdit : AppCompatActivity() {
             //update database from hashMap
             databaseRef.child(sugId!!).updateChildren(map).addOnCompleteListener {
                 if( it.isSuccessful){
-                    intent = Intent(applicationContext, FinanceSuggestionFetching::class.java)
-                    startActivity(intent)
+                    //intent = Intent(applicationContext, FinanceSuggestionFetching::class.java)
+                    //startActivity(intent)
                     Toast.makeText(this, "Suggestion Updated successfully", Toast.LENGTH_SHORT).show()
                 } else {
                     Toast.makeText(this, it.exception?.message, Toast.LENGTH_SHORT).show()
