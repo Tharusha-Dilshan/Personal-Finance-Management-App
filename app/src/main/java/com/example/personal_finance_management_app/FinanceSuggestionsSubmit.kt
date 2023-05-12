@@ -56,8 +56,7 @@ class FinanceSuggestionsSubmit : AppCompatActivity() {
                 val suggestion2 = SuggestionModel(id,bankName,finType,addedSug,)
                 databaseRef.child(id).setValue(suggestion).addOnCompleteListener {
                     if (it.isSuccessful){
-                        //intent = Intent(applicationContext, FinanceActivity::class.java)
-                        //startActivity(intent)
+
                         Toast.makeText(this, "Your Suggestion added successfully", Toast.LENGTH_SHORT).show()
                     } else {
                         Toast.makeText(this, it.exception?.message, Toast.LENGTH_SHORT).show()
@@ -66,8 +65,11 @@ class FinanceSuggestionsSubmit : AppCompatActivity() {
                 databaseRef2.child(id).setValue(suggestion2).addOnCompleteListener {
 
                 }
+                intent = Intent(applicationContext, FinanceSuggestionFetching::class.java)
+                startActivity(intent)
+                finish()
             }
-            finish()
+
         }
         binding.sugCancelBtn.setOnClickListener{
             binding.sugInputField.text?.clear()
@@ -76,7 +78,7 @@ class FinanceSuggestionsSubmit : AppCompatActivity() {
         binding.sugEditBtn.setOnClickListener{
             intent = Intent(applicationContext, FinanceSuggestionFetching::class.java)
             startActivity(intent)
-            finish()
+
         }
     }
 }
