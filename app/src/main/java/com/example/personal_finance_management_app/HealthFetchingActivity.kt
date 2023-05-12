@@ -30,6 +30,7 @@ class HealthFetchingActivity : AppCompatActivity() {
         binding.addHealth.setOnClickListener{
             intent = Intent(applicationContext, HealthInsertionActivity::class.java)
             startActivity(intent)
+            finish()
         }
         binding.backBtn.setOnClickListener{
             intent = Intent(applicationContext, ExpensesActivity::class.java)

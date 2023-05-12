@@ -52,13 +52,13 @@ class TelecommunicationUpdateDetailsActivity : AppCompatActivity() {
             //update database from hashMap
             databaseRef.child(telId!!).updateChildren(map).addOnCompleteListener {
                 if (it.isSuccessful) {
-//                    intent = Intent(applicationContext, TelecommunicationFetchingActivity::class.java)
-//                    startActivity(intent)
                     Toast.makeText(this, "Details updated successfully", Toast.LENGTH_SHORT).show()
                 } else {
                     Toast.makeText(this, it.exception?.message, Toast.LENGTH_SHORT).show()
                 }
             }
+//            intent = Intent(applicationContext, TelecommunicationFetchingActivity::class.java)
+//            startActivity(intent)
             finish()
         }
     }

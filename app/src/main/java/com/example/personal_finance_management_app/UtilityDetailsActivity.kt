@@ -26,7 +26,7 @@ class UtilityDetailsActivity : AppCompatActivity() {
         databaseRef = FirebaseDatabase.getInstance().reference
             .child("utility").child(uid)
 
-
+        //get data
         val utilityName = intent.getStringExtra("utilityName")
         val utilityAmount = intent.getStringExtra("utilityAmount")
         val utilityDate = intent.getStringExtra("utilityDate")
@@ -52,10 +52,12 @@ class UtilityDetailsActivity : AppCompatActivity() {
             databaseRef.child(utilityId!!).removeValue().addOnCompleteListener {
                 if( it.isSuccessful){
                     Toast.makeText(this, "Item deleted", Toast.LENGTH_SHORT).show()
-                    intent = Intent(applicationContext, UtilityFetchingActivity::class.java)
-                    startActivity(intent)
+                }else {
+                    Toast.makeText(this, it.exception?.message, Toast.LENGTH_SHORT).show()
                 }
             }
+//            intent = Intent(applicationContext, UtilityFetchingActivity::class.java)
+//            startActivity(intent)
             finish()
         }
 

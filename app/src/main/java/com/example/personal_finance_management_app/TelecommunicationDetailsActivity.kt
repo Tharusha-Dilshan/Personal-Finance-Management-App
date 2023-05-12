@@ -25,7 +25,7 @@ class TelecommunicationDetailsActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
         uid = auth.currentUser?.uid.toString()
         databaseRef = FirebaseDatabase.getInstance().reference
-            .child("utility").child(uid)
+            .child("telecommunication").child(uid)
 
 
         val telName = intent.getStringExtra("telName")
@@ -53,10 +53,12 @@ class TelecommunicationDetailsActivity : AppCompatActivity() {
             databaseRef.child(telId!!).removeValue().addOnCompleteListener {
                 if( it.isSuccessful){
                     Toast.makeText(this, "Item deleted", Toast.LENGTH_SHORT).show()
-                    intent = Intent(applicationContext, TelecommunicationFetchingActivity::class.java)
-                    startActivity(intent)
+                }else {
+                    Toast.makeText(this, it.exception?.message, Toast.LENGTH_SHORT).show()
                 }
             }
+//            intent = Intent(applicationContext, TelecommunicationFetchingActivity::class.java)
+//            startActivity(intent)
             finish()
         }
     }

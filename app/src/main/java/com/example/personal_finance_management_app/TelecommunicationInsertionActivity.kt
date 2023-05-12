@@ -48,7 +48,7 @@ class TelecommunicationInsertionActivity : AppCompatActivity() {
             }else {
                 //Id for new record
                 var id = databaseRef.push().key!!
-                //create a health object
+                //create a telecommunication object
                 val tele = TelecommunicationModel( teleBillName,teleBillAmount,teleBillDate,id)
                 databaseRef.child(id).setValue(tele).addOnCompleteListener {
                     if (it.isSuccessful){
@@ -58,12 +58,13 @@ class TelecommunicationInsertionActivity : AppCompatActivity() {
                         binding.teleBillAmount.text.clear()
                         binding.teleBillDate.text.clear()
 
-                        intent = Intent(applicationContext, TelecommunicationFetchingActivity::class.java)
-                        startActivity(intent)
                     } else {
                         Toast.makeText(this, it.exception?.message, Toast.LENGTH_SHORT).show()
                     }
                 }
+                intent = Intent(applicationContext, TelecommunicationFetchingActivity::class.java)
+                startActivity(intent)
+                finish()
             }
         }
     }
