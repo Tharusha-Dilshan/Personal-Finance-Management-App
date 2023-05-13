@@ -25,12 +25,13 @@ class UtilityUpdateDetailsActivity : AppCompatActivity() {
         databaseRef = FirebaseDatabase.getInstance().reference
             .child("utility").child(uid)
 
-
+        //get data from UtilityDetailsActivity
         val utilityName = intent.getStringExtra("utilityName")
         val utilityAmount = intent.getStringExtra("utilityAmount")
         val utilityDate = intent.getStringExtra("utilityDate")
         val utilityId = intent.getStringExtra("utilityId")
 
+        //Set data to Edit text fields
         binding.utilityBillName.setText(utilityName)
         binding.utilityBillAmount.setText(utilityAmount)
         binding.utilityBillDate.setText(utilityDate)
