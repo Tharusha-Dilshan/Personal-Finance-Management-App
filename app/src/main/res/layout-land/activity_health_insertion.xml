@@ -57,6 +57,7 @@
                 android:layout_marginTop="20dp"
                 android:padding="10dp"
                 android:hint="Enter Bill Amount"
+                android:inputType="numberDecimal"
                 android:gravity="start|center_vertical"
                 android:textColor="@color/darkBlue"/>
 

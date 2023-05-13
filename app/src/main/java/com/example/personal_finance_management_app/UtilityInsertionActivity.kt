@@ -32,11 +32,12 @@ class UtilityInsertionActivity : AppCompatActivity() {
 
         binding.utilitySaveButton.setOnClickListener{
 
+            //Variable declarations
             var utilityBillName = binding.utilityBillName.text.toString()
             var utilityBillAmount = binding.utilityBillAmount.text.toString()
             var utilityBillDate = binding.utilityBillDate.text.toString()
 
-
+            //validations
             if(utilityBillName.isEmpty() || utilityBillAmount.isEmpty() || utilityBillDate.isEmpty()) {
 
                 if (utilityBillName.isEmpty()) {

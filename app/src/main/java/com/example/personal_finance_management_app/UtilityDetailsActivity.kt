@@ -32,7 +32,7 @@ class UtilityDetailsActivity : AppCompatActivity() {
         val utilityDate = intent.getStringExtra("utilityDate")
         val utilityId = intent.getStringExtra("utilityId")
 
-        //bind values to editTexts
+        //binding values to editTexts
         binding.UtilitybillName.text=utilityName
         binding.UtilitybillAmount.text=utilityAmount
         binding.UtilitybillDate.text=utilityDate
