@@ -80,9 +80,6 @@
             android:name=".ViewAsset"
             android:exported="false" />
         <activity
-            android:name=".FinanceCalculators"
-            android:exported="true" />
-        <activity
             android:name=".FinanceSuggestionFetching"
             android:exported="true" />
         <activity
