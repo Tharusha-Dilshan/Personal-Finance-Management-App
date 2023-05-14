@@ -58,10 +58,11 @@ class Login : AppCompatActivity() {
                 //Log in
                 auth.signInWithEmailAndPassword(email, password).addOnCompleteListener{
                     if(it.isSuccessful){
+                        Toast.makeText(this, "Successfully Logged In", Toast.LENGTH_SHORT).show()
                         intent = Intent(applicationContext, HomePage::class.java)
                         startActivity(intent)
                     }else{
-                        Toast.makeText(this, "Something went wrong, try again", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "Please Enter Valid Email and Password", Toast.LENGTH_SHORT).show()
                     }
                 }
             }

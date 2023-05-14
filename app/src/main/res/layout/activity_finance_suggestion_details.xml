@@ -53,13 +53,14 @@
                     android:layout_width="0dp"
                     android:layout_height="30dp"
                     android:layout_weight="0.6"
-                    android:background="@color/lightGray_bg">
+                    android:background="@color/white">
 
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="left"
+                        android:background="@color/white"
                         android:gravity="left"
                         android:paddingLeft="2dp"
                         android:paddingTop="2dp"
@@ -106,12 +107,13 @@
                     android:layout_width="0dp"
                     android:layout_height="30dp"
                     android:layout_weight="0.6"
-                    android:background="@color/lightGray_bg">
+                    android:background="@color/white">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="left"
+                        android:background="@color/white"
                         android:gravity="left"
                         android:paddingLeft="2dp"
                         android:paddingTop="2dp"
@@ -125,7 +127,8 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1.4">
+                    android:layout_weight="1.4"
+                    android:background="@color/white">
 
                     <TextView
                         android:id="@+id/tvFinType"
@@ -155,12 +158,13 @@
                     android:layout_width="0dp"
                     android:layout_height="30dp"
                     android:layout_weight="0.6"
-                    android:background="@color/lightGray_bg">
+                    android:background="@color/white">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="left"
+                        android:background="@color/white"
                         android:gravity="left"
                         android:paddingLeft="2dp"
                         android:paddingTop="2dp"

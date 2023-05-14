@@ -113,9 +113,6 @@
             android:name=".PortAddAsset"
             android:exported="true" />
         <activity
-            android:name=".DashHome"
-            android:exported="true" />
-        <activity
             android:name=".CreateAccount"
             android:exported="true" />
         <activity
