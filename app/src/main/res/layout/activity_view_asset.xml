@@ -214,7 +214,7 @@
                     android:layout_marginStart="10sp"
                     android:layout_weight="1"
                     android:backgroundTint="@color/Teal"
-                    android:drawableLeft="@drawable/delete"
+                    android:drawableLeft="@drawable/edit"
                     android:paddingStart="10sp"
                     android:paddingEnd="10sp"
                     android:text="Edit"
