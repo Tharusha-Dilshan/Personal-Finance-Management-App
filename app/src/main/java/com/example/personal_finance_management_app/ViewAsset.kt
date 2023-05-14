@@ -64,6 +64,7 @@ class ViewAsset : AppCompatActivity() {
 
                 startActivity(it)
             }
+            finish()
         }
 
         binding.deleteBtn.setOnClickListener {
