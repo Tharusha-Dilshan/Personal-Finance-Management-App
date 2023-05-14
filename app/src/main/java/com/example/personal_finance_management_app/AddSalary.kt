@@ -45,14 +45,17 @@ class AddSalary : AppCompatActivity() {
                 val request = Salary( salary,uid,id,)
                 databaseRef.setValue(request).addOnCompleteListener {
                     if (it.isSuccessful){
-                        intent = Intent(applicationContext, SetGoals::class.java)
-                        startActivity(intent)
+
                         Toast.makeText(this, "Salary added successfully", Toast.LENGTH_SHORT).show()
                     } else {
                         Toast.makeText(this, it.exception?.message, Toast.LENGTH_SHORT).show()
                     }
                 }
+                intent = Intent(applicationContext, SetGoals::class.java)
+                startActivity(intent)
+                finish()
             }
+
         }
 
 

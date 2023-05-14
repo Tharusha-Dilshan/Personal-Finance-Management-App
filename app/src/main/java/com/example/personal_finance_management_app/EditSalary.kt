@@ -51,6 +51,7 @@ class EditSalary : AppCompatActivity() {
                     Toast.makeText(this, it.exception?.message, Toast.LENGTH_SHORT).show()
                 }
             }
+            finish()
         }
 
 

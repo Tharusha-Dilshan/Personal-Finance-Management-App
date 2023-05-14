@@ -34,17 +34,17 @@ class SetGoalSalaryCheck : AppCompatActivity() {
         binding.backBtn.setOnClickListener {
             intent = Intent(applicationContext, SetGoals::class.java)
             startActivity(intent)
-
+            finish()
         }
         binding.addBtn.setOnClickListener {
             intent = Intent(applicationContext, AddSalary::class.java)
             startActivity(intent)
-
+            finish()
         }
         binding.EditBtn.setOnClickListener {
             intent = Intent(applicationContext, EditSalary::class.java)
             startActivity(intent)
-
+            finish()
         }
 
 
