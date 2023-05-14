@@ -28,6 +28,7 @@ class Portfolio : AppCompatActivity() {
         binding.imageView8.setOnClickListener{
             intent = Intent(applicationContext, PortAddAsset::class.java)
             startActivity(intent)
+            finish()
         }
 
         //initialize variables
