@@ -65,8 +65,8 @@ class PortEditAsset : AppCompatActivity() {
             //update database from hashMap
             databaseRef.child(reqID!!).updateChildren(map).addOnCompleteListener {
                 if( it.isSuccessful){
-                    intent = Intent(applicationContext, Portfolio::class.java)
-                    startActivity(intent)
+//                    intent = Intent(applicationContext, Portfolio::class.java)
+//                    startActivity(intent)
                     Toast.makeText(this, "Asset updated successfully", Toast.LENGTH_SHORT).show()
                 } else {
                     Toast.makeText(this, it.exception?.message, Toast.LENGTH_SHORT).show()
