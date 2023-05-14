@@ -114,7 +114,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="6dp"
         android:background="@drawable/btn_background"
-        android:text="SING IN"
+        android:text="SIGN IN"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
