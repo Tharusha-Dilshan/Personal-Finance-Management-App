@@ -50,8 +50,8 @@ class EditGoal : AppCompatActivity() {
             //update database from hashMap
             databaseRef.child(id!!).updateChildren(map).addOnCompleteListener {
                 if (it.isSuccessful) {
-                    intent = Intent(applicationContext, SetGoals::class.java)
-                    startActivity(intent)
+                    //intent = Intent(applicationContext, SetGoals::class.java)
+                    //startActivity(intent)
                     Toast.makeText(this, "Updated successfully", Toast.LENGTH_SHORT).show()
                 } else {
                     Toast.makeText(this, it.exception?.message, Toast.LENGTH_SHORT).show()
@@ -64,8 +64,8 @@ class EditGoal : AppCompatActivity() {
             databaseRef.child(id!!).removeValue().addOnCompleteListener {
                 if (it.isSuccessful) {
                     Toast.makeText(this, "Item deleted", Toast.LENGTH_SHORT).show()
-                    intent = Intent(applicationContext, SetGoals::class.java)
-                    startActivity(intent)
+                    //intent = Intent(applicationContext, SetGoals::class.java)
+                    //startActivity(intent)
                 }
             }
             finish()
