@@ -2,6 +2,7 @@ package com.example.personal_finance_management_app
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.content.ContextCompat.startActivity
@@ -58,6 +59,7 @@ class HomePage : AppCompatActivity() {
             clearUserSession()
 
             // Launch LoginActivity to start a new user session
+            Toast.makeText(this, "Log Out Successfully", Toast.LENGTH_SHORT).show()
             intent = Intent(applicationContext, Login::class.java)
             startActivity(intent)
 
@@ -65,6 +67,7 @@ class HomePage : AppCompatActivity() {
             finish()
         }
         binding.logOutTxt.setOnClickListener{
+            Toast.makeText(this, "Log Out Successfully", Toast.LENGTH_SHORT).show()
             // Clear any saved user session data or preferences
             clearUserSession()
 

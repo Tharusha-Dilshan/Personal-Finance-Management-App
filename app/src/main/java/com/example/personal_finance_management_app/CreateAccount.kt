@@ -69,6 +69,7 @@ class CreateAccount : AppCompatActivity() {
                         databaseRef.setValue(user).addOnCompleteListener {
                             if (it.isSuccessful) {
                                 //redirect user to login activity
+                                Toast.makeText(this, "Successfully Logged In  ", Toast.LENGTH_SHORT).show()
                                 val intent = Intent(this, Login::class.java)
                                 startActivity(intent)
                             } else {

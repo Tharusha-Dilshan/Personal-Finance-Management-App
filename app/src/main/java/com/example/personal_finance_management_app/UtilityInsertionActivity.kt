@@ -7,7 +7,6 @@ import android.os.Bundle
 import android.widget.Toast
 import com.example.personal_finance_management_app.DataClasses.HealthModel
 import com.example.personal_finance_management_app.DataClasses.UtilityModel
-import com.example.personal_finance_management_app.databinding.ActivityDashHomeBinding
 import com.example.personal_finance_management_app.databinding.ActivityUtilityInsertionBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
