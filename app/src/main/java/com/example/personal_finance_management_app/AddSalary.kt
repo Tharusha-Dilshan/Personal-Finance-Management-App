@@ -4,52 +4,49 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.personal_finance_management_app.DataClasses.GolsModel
-import com.example.personal_finance_management_app.databinding.ActivityNewCatogoryBinding
+import com.example.personal_finance_management_app.DataClasses.Salary
+import com.example.personal_finance_management_app.databinding.ActivityAddSalaryBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
-class NewCatogory : AppCompatActivity() {
-    private lateinit var binding: ActivityNewCatogoryBinding
+class AddSalary : AppCompatActivity() {
+    private lateinit var binding: ActivityAddSalaryBinding
     private lateinit var auth: FirebaseAuth
+    private lateinit var database: FirebaseDatabase
     private lateinit var databaseRef: DatabaseReference
     private lateinit var uid: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityNewCatogoryBinding.inflate(layoutInflater)
+        binding = ActivityAddSalaryBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-
 
         //initialize variables
         auth = FirebaseAuth.getInstance()
         uid = auth.currentUser?.uid.toString()
-        databaseRef = FirebaseDatabase.getInstance().reference.child("setGoals").child(uid)
+        databaseRef = FirebaseDatabase.getInstance().reference.child("salary").child(uid)
+
 
         binding.btnSave.setOnClickListener {
 
-            var cat = binding.etName.text.toString()
-            var goal = binding.etGoal.text.toString()
+            var salary = binding.etSalary.text.toString()
 
-            if ( cat.isEmpty() || goal.isEmpty() ) {
-                if (cat.isEmpty()) {
-                    binding.etName.error = "Enter Category"
+
+            if ( salary.isEmpty() ) {
+                if (salary.isEmpty()) {
+                    binding.etSalary.error = "Enter Category"
                 }
 
-                if (goal.isEmpty()) {
-                    binding.etGoal.error = "Enter amount"
-                }
             } else {
                 //Id for new record
                 var id = databaseRef.push().key!!
                 //create a FundraisingData object
-                val request = GolsModel( id,cat,goal,uid)
-                databaseRef.child(id).setValue(request).addOnCompleteListener {
+                val request = Salary( salary,uid,id,)
+                databaseRef.setValue(request).addOnCompleteListener {
                     if (it.isSuccessful){
 
-                        Toast.makeText(this, "Goal added successfully", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "Salary added successfully", Toast.LENGTH_SHORT).show()
                     } else {
                         Toast.makeText(this, it.exception?.message, Toast.LENGTH_SHORT).show()
                     }
@@ -60,5 +57,8 @@ class NewCatogory : AppCompatActivity() {
             }
 
         }
+
+
+
     }
 }

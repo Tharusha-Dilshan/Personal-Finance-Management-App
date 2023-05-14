@@ -20,6 +20,7 @@ class SetGoals : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
     private var mList = ArrayList<GolsModel>()
     private lateinit var adapter: GoalsAdapter
+    var totalAmount = 0.0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -57,6 +58,7 @@ class SetGoals : AppCompatActivity() {
             intent = Intent(applicationContext, NewCatogory::class.java)
             startActivity(intent)
         }
+
     }
 
     private fun retrieveData() {
@@ -70,6 +72,17 @@ class SetGoals : AppCompatActivity() {
                     }
                 }
                 adapter.notifyDataSetChanged()
+                updateTotalAmount()
+
+                var sTotal=totalAmount.toString()
+
+                binding.checkBtn.setOnClickListener{
+                    intent = Intent(applicationContext, SetGoalSalaryCheck::class.java).also {
+                        it.putExtra("totalAmount",sTotal)
+                        startActivity(it)
+                    }
+                }
+
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -77,6 +90,19 @@ class SetGoals : AppCompatActivity() {
             }
 
         })
+    }
+
+    private fun updateTotalAmount() {
+
+
+        for (expense in mList) {
+            val amount = expense.amount!!.toDouble()
+            if (amount != null) {
+                totalAmount += amount
+            }
+        }
+
+        binding.tvTotGoal.text = String.format("%.2f", totalAmount)
     }
 
     private fun addDataToList(){
