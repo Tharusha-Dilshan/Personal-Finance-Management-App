@@ -75,6 +75,7 @@ class ViewAsset : AppCompatActivity() {
                     startActivity(intent)
                 }
             }
+            finish()
         }
 
 
