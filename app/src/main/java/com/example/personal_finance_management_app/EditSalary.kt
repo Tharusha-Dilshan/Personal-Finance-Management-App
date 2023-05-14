@@ -5,50 +5,44 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.personal_finance_management_app.databinding.ActivityEditGoalBinding
+import com.example.personal_finance_management_app.databinding.ActivityEditSalaryBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
-class EditGoal : AppCompatActivity() {
-    private lateinit var binding: ActivityEditGoalBinding
+class EditSalary : AppCompatActivity() {
+    private lateinit var binding: ActivityEditSalaryBinding
     private lateinit var auth: FirebaseAuth
     private lateinit var databaseRef: DatabaseReference
     private lateinit var uid: String
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityEditGoalBinding.inflate(layoutInflater)
+        binding = ActivityEditSalaryBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         //initialize variables
         auth = FirebaseAuth.getInstance()
         uid = auth.currentUser?.uid.toString()
-        databaseRef = FirebaseDatabase.getInstance().reference.child("setGoals").child(uid)
-
+        databaseRef = FirebaseDatabase.getInstance().reference.child("salary")
 
         //fetch data from the intent
-        var name = intent.getStringExtra("name")
-        var amount = intent.getStringExtra("amount")
-        var id = intent.getStringExtra("id")
+        var salary = intent.getStringExtra("totSalary")
 
-
-        binding.etName.setText(name)
-        binding.etGoal.setText(amount)
+        binding.etSalary.setText(salary)
 
         binding.btnSave.setOnClickListener {
 
-            val category = binding.etName.text.toString()
-            val goal = binding.etGoal.text.toString()
+            val salary = binding.etSalary.text.toString()
+
 
             val map = HashMap<String, Any>()
 
             //add data to hashMap
-            map["name"] = category
-            map["amount"] = goal
+            map["amount"] = salary
 
 
             //update database from hashMap
-            databaseRef.child(id!!).updateChildren(map).addOnCompleteListener {
+            databaseRef.child(uid!!).updateChildren(map).addOnCompleteListener {
                 if (it.isSuccessful) {
                     intent = Intent(applicationContext, SetGoals::class.java)
                     startActivity(intent)
@@ -60,16 +54,6 @@ class EditGoal : AppCompatActivity() {
             finish()
         }
 
-        binding.deleteBtn.setOnClickListener {
-            databaseRef.child(id!!).removeValue().addOnCompleteListener {
-                if (it.isSuccessful) {
-                    Toast.makeText(this, "Item deleted", Toast.LENGTH_SHORT).show()
-                    intent = Intent(applicationContext, SetGoals::class.java)
-                    startActivity(intent)
-                }
-            }
-            finish()
-        }
 
     }
 }
