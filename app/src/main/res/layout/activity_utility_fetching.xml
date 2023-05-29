@@ -45,8 +45,8 @@
 
         <TextView
             android:id="@+id/textTotalAmount"
-            android:layout_width="113dp"
-            android:layout_height="42dp"
+            android:layout_width="25dp"
+            android:layout_height="40dp"
             android:layout_marginLeft="15dp"
             android:layout_weight="1"
             android:text="Total Amount: "
@@ -57,10 +57,10 @@
 
         <TextView
             android:id="@+id/totalFeeTxt"
-            android:layout_width="154dp"
-            android:layout_height="match_parent"
+            android:layout_width="36dp"
+            android:layout_height="40dp"
             android:layout_weight="1"
-            android:text="0"
+            android:text="0.00"
             android:textColor="@color/black"
             android:textSize="20sp" />
     </LinearLayout>

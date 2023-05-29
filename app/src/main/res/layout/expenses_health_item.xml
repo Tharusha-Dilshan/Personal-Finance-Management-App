@@ -29,24 +29,24 @@
 
             <TextView
                 android:id="@+id/healthName"
-                android:layout_width="175dp"
+                android:layout_width="170dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:text="Bill Name"
                 android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textSize="15sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/healthAmount"
-                android:layout_width="149dp"
+                android:layout_width="140dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:text="Bill amount"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
 
             <ImageView
                 android:id="@+id/EditImage"
