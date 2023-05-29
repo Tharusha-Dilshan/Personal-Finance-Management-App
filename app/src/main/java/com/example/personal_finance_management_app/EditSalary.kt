@@ -44,8 +44,8 @@ class EditSalary : AppCompatActivity() {
             //update database from hashMap
             databaseRef.child(uid!!).updateChildren(map).addOnCompleteListener {
                 if (it.isSuccessful) {
-                    intent = Intent(applicationContext, SetGoals::class.java)
-                    startActivity(intent)
+                    //intent = Intent(applicationContext, SetGoals::class.java)
+                  //  startActivity(intent)
                     Toast.makeText(this, "Updated successfully", Toast.LENGTH_SHORT).show()
                 } else {
                     Toast.makeText(this, it.exception?.message, Toast.LENGTH_SHORT).show()

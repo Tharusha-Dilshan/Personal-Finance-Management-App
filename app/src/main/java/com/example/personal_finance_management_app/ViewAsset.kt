@@ -71,8 +71,8 @@ class ViewAsset : AppCompatActivity() {
             databaseRef.child(reqID!!).removeValue().addOnCompleteListener {
                 if( it.isSuccessful){
                     Toast.makeText(this, "Item deleted", Toast.LENGTH_SHORT).show()
-                    intent = Intent(applicationContext, Portfolio::class.java)
-                    startActivity(intent)
+//                    intent = Intent(applicationContext, Portfolio::class.java)
+//                    startActivity(intent)
                 }
             }
             finish()

@@ -71,8 +71,8 @@ class PortAddAsset : AppCompatActivity() {
                         Toast.makeText(this, it.exception?.message, Toast.LENGTH_SHORT).show()
                     }
                 }
-//                intent = Intent(applicationContext, Portfolio::class.java)
-//                startActivity(intent)
+               intent = Intent(applicationContext, Portfolio::class.java)
+               startActivity(intent)
                 finish()
             }
         }
